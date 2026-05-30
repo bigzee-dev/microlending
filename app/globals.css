@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------
+   Editorial financial · cream/ink/clay/forest
+   Dark mode is driven by the OS via prefers-color-scheme.
+--------------------------------------------------------------- */
+
+:root {
+  --bg: 250 247 240;        /* warm cream */
+  --bg-elev: 253 251 246;
+  --surface: 255 252 246;
+  --ink: 16 13 8;
+  --ink-soft: 86 79 63;
+  --rule: 234 222 200;
+  --rule-soft: 245 235 215;
+  --clay: 184 85 46;
+  --forest: 38 74 54;
+  --marigold: 217 144 8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: 10 8 5;
+    --bg-elev: 16 13 8;
+    --surface: 22 18 12;
+    --ink: 245 243 239;
+    --ink-soft: 168 160 142;
+    --rule: 42 37 26;
+    --rule-soft: 30 26 18;
+    --clay: 226 151 107;
+    --forest: 144 181 154;
+    --marigold: 247 195 63;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--ink));
+  font-feature-settings: "ss01", "cv11", "kern";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: rgb(var(--clay) / 0.22);
+  color: rgb(var(--ink));
+}
+
+/* ---------- Utilities ---------- */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Editorial section eyebrow: e.g. "01 — Calculate" */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgb(var(--ink-soft));
+  }
+
+  /* Subtle paper grain — used as overlay on backgrounds */
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.32 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+  }
+  @media (prefers-color-scheme: dark) {
+    .grain::after {
+      mix-blend-mode: screen;
+      opacity: 0.12;
+    }
+  }
+
+  /* Botswana-basket inspired chevron pattern */
+  .pattern-weave {
+    background-image:
+      linear-gradient(135deg, rgba(184,85,46,0.07) 25%, transparent 25%, transparent 50%, rgba(184,85,46,0.07) 50%, rgba(184,85,46,0.07) 75%, transparent 75%, transparent);
+    background-size: 18px 18px;
+  }
+  @media (prefers-color-scheme: dark) {
+    .pattern-weave {
+      background-image:
+        linear-gradient(135deg, rgba(226,151,107,0.06) 25%, transparent 25%, transparent 50%, rgba(226,151,107,0.06) 50%, rgba(226,151,107,0.06) 75%, transparent 75%, transparent);
+    }
+  }
+
+  /* Soft rule */
+  .rule {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgb(var(--rule)) 14%, rgb(var(--rule)) 86%, transparent);
+  }
+
+  /* Asterism — three-asterisk ornament for editorial breaks */
+  .asterism::before {
+    content: "✻ ✻ ✻";
+    display: block;
+    letter-spacing: 0.6em;
+    color: rgb(var(--ink-soft));
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  }
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+  }
+
+  /* Underline-from-left link */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.35s ease;
+  }
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+
+  /* Optical-sized display tweak */
+  .display-tight {
+    font-variation-settings: "opsz" 144, "wght" 600, "SOFT" 0;
+  }
+  .display-italic {
+    font-variation-settings: "opsz" 144, "wght" 500, "SOFT" 100;
+    font-style: italic;
+  }
+}
+
+/* ---------- Slider ---------- */
+input[type="range"].slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    rgb(var(--clay)) 0%,
+    rgb(var(--clay)) var(--progress, 50%),
+    rgb(var(--rule)) var(--progress, 50%),
+    rgb(var(--rule)) 100%
+  );
+}
+
+input[type="range"].slider::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    rgb(var(--clay)) 0%,
+    rgb(var(--clay)) var(--progress, 50%),
+    rgb(var(--rule)) var(--progress, 50%),
+    rgb(var(--rule)) 100%
+  );
+}
+
+input[type="range"].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: rgb(var(--bg));
+  border: 2.5px solid rgb(var(--clay));
+  margin-top: -8px;
+  box-shadow: 0 8px 22px -8px rgba(184, 85, 46, 0.55);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"].slider:hover::-webkit-slider-thumb {
+  transform: scale(1.08);
+  box-shadow: 0 10px 26px -8px rgba(184, 85, 46, 0.7);
+}
+
+input[type="range"].slider:focus-visible::-webkit-slider-thumb {
+  outline: 3px solid rgb(var(--clay) / 0.3);
+  outline-offset: 2px;
+}
+
+input[type="range"].slider::-moz-range-thumb {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: rgb(var(--bg));
+  border: 2.5px solid rgb(var(--clay));
+  box-shadow: 0 8px 22px -8px rgba(184, 85, 46, 0.55);
+  cursor: pointer;
+}
+
+/* ---------- Form fields ---------- */
+.field {
+  width: 100%;
+  background: rgb(var(--surface));
+  border: 1px solid rgb(var(--rule));
+  border-radius: 4px;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  color: rgb(var(--ink));
+  font-family: var(--font-sans);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.field::placeholder {
+  color: rgb(var(--ink-soft) / 0.6);
+}
+.field:focus {
+  outline: none;
+  border-color: rgb(var(--clay));
+  box-shadow: 0 0 0 4px rgb(var(--clay) / 0.12);
+}
+textarea.field {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.55;
+}

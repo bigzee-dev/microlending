@@ -61,13 +61,13 @@ export function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat on WhatsApp"
-            className="group relative grid h-10 w-10 place-items-center overflow-hidden rounded-full border border-ink-200/70 bg-cream-50/90 text-[#1FAE54] backdrop-blur transition hover:border-[#25D366] hover:bg-[#25D366] hover:text-white dark:border-ink-700 dark:bg-ink-900/60 dark:text-[#5BD389] dark:hover:bg-[#25D366] dark:hover:text-white"
+            className="group relative grid h-10 w-10 place-items-center overflow-hidden rounded-full border border-ink-200/70 bg-cream-50/90 text-[#1FAE54] backdrop-blur transition hover:border-[#25D366] hover:bg-[#25D366] hover:text-white dark:border-ink-600 dark:bg-white/10 dark:text-[#5BD389] dark:hover:bg-[#25D366] dark:hover:text-white"
           >
             <span className="absolute inset-0 -z-10 scale-0 rounded-full bg-[#25D366] transition-transform duration-500 group-hover:scale-100" />
             <svg viewBox="0 0 32 32" className="h-4 w-4" fill="currentColor">
               <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39-.078 0-.16-.04-.24-.085-.6-.337-1.94-.998-2.965-1.927-.27-.247-.51-.521-.71-.81-.74-1.07-.74-1.07-.31-1.85.18-.33.45-.79.6-1.13.15-.34.05-.66-.04-.83-.09-.18-.84-2.04-1.16-2.78-.32-.74-.66-.65-.9-.65-.23 0-.5-.03-.77-.03s-.7.09-1.06.5c-.36.41-1.38 1.35-1.38 3.28 0 1.93 1.4 3.8 1.6 4.06.2.27 2.76 4.2 6.69 5.89.93.4 1.66.64 2.22.82 1.93.61 3.69.52 5.08.31.74-.11 2.28-.93 2.6-1.84.32-.91.32-1.69.23-1.84-.1-.16-.36-.27-.75-.45-.39-.18-2.32-1.15-2.68-1.28-.36-.13-.62-.19-.88.19zM16.013 0C7.17 0 0 7.17 0 16.013c0 2.766.713 5.366 1.966 7.626L0 32l8.626-1.92C10.732 31.28 13.28 32 16.013 32 24.83 32 32 24.83 32 16.013 32 7.17 24.83 0 16.013 0zm.013 29.027c-2.452 0-4.733-.706-6.66-1.92L4 28.467l1.426-5.226c-1.4-2.04-2.226-4.467-2.226-7.094 0-6.967 5.66-12.627 12.626-12.627 6.967 0 12.627 5.66 12.627 12.627 0 6.966-5.66 12.88-12.4 12.88z" />
             </svg>
-            <span className="absolute -bottom-0.5 right-1.5 h-1.5 w-1.5 rounded-full bg-[#25D366] ring-2 ring-cream-50 dark:ring-ink-950" />
+            {/* <span className="absolute -bottom-0.5 right-1.5 h-1.5 w-1.5 rounded-full bg-[#25D366] ring-2 ring-cream-50 dark:ring-ink-950" /> */}
           </Link>
 
           {/* Facebook icon button */}
@@ -76,7 +76,7 @@ export function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit our Facebook page"
-            className="group relative grid h-10 w-10 place-items-center overflow-hidden rounded-full border border-ink-200/70 bg-cream-50/90 text-[#1465D8] backdrop-blur transition hover:border-[#1877F2] hover:bg-[#1877F2] hover:text-white dark:border-ink-700 dark:bg-ink-900/60 dark:text-[#5BA0F7] dark:hover:bg-[#1877F2] dark:hover:text-white"
+            className="group relative grid h-10 w-10 place-items-center overflow-hidden rounded-full border border-ink-200/70 bg-cream-50/90 text-[#1465D8] backdrop-blur transition hover:border-[#1877F2] hover:bg-[#1877F2] hover:text-white dark:border-ink-600 dark:bg-white/10 dark:text-[#5BA0F7] dark:hover:bg-[#1877F2] dark:hover:text-white"
           >
             <span className="absolute inset-0 -z-10 scale-0 rounded-full bg-[#1877F2] transition-transform duration-500 group-hover:scale-100" />
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">

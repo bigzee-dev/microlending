@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Fraunces, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Montserrat, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  axes: ["opsz", "SOFT"],
 });
 
 const dmSans = DM_Sans({
@@ -41,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
+      className={`${montserrat.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
     >
       <body className="font-sans antialiased">{children}</body>
     </html>

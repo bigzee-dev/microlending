@@ -110,13 +110,17 @@ export function LoanCalculator() {
               </div>
               <div className="flex gap-1.5">
                 <CounterBtn
-                  onClick={() => setAmount((a) => Math.max(MIN_AMOUNT, a - 500))}
+                  onClick={() =>
+                    setAmount((a) => Math.max(MIN_AMOUNT, a - 500))
+                  }
                   label="Decrease"
                 >
                   −
                 </CounterBtn>
                 <CounterBtn
-                  onClick={() => setAmount((a) => Math.min(MAX_AMOUNT, a + 500))}
+                  onClick={() =>
+                    setAmount((a) => Math.min(MAX_AMOUNT, a + 500))
+                  }
                   label="Increase"
                 >
                   +
@@ -192,7 +196,7 @@ export function LoanCalculator() {
             </div>
 
             {/* Ledger */}
-            <div className="mt-12 border-t border-ink-200 pt-6 dark:border-ink-800">
+            {/* <div className="mt-12 border-t border-ink-200 pt-6 dark:border-ink-800">
               <div className="flex items-baseline justify-between">
                 <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-500 dark:text-ink-400">
                   † Ledger
@@ -207,7 +211,7 @@ export function LoanCalculator() {
                 <LedgerRow label="Initiation fee" value={PULA(initiation)} note="5%, capped at P750" />
                 <LedgerRow label="Service fee" value={PULA(service)} note={`P${SERVICE_FEE_PER_MONTH} per month`} />
               </dl>
-            </div>
+            </div> */}
           </div>
 
           {/* Summary panel */}
@@ -263,7 +267,15 @@ export function LoanCalculator() {
                 className="mt-8 inline-flex w-full items-center justify-between gap-2 rounded-full bg-cream-50 px-5 py-3.5 text-sm font-medium text-ink-900 transition hover:bg-clay-400 hover:text-cream-50"
               >
                 Apply for {PULA(amount).replace(/\.00$/, "")}
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  className="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M5 12h14M13 5l7 7-7 7" />
                 </svg>
               </Link>

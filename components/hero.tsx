@@ -11,7 +11,7 @@ export function Hero() {
       <div className="absolute -bottom-32 left-[5%] -z-10 h-[360px] w-[360px] rounded-full bg-forest-200/30 blur-3xl dark:bg-forest-900/30" />
 
       {/* Editorial header strip */}
-      <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-10">
+      {/* <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-10">
         <div className="flex items-center justify-between border-b border-ink-200/60 pb-3 text-[10px] uppercase tracking-[0.25em] text-ink-500 dark:border-ink-800 dark:text-ink-300">
           <span className="font-mono">Vol. I · No. 01</span>
           <span className="hidden font-mono sm:inline">
@@ -19,7 +19,7 @@ export function Hero() {
           </span>
           <span className="font-mono">P500 — P15,000</span>
         </div>
-      </div>
+      </div> */}
 
       <div className="mx-auto grid max-w-7xl gap-12 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 lg:pb-24 lg:pt-16">
         {/* Editorial copy column */}
@@ -95,16 +95,16 @@ export function Hero() {
             ].map((s) => (
               <div key={s.v} className="relative">
                 <dt className="font-display text-3xl font-medium tracking-editorial text-ink-900 sm:text-4xl dark:text-cream-100">
-                  <span className="font-mono text-[10px] align-top text-clay-600 mr-1 dark:text-clay-300">
+                  {/* <span className="font-mono text-[10px] align-top text-clay-600 mr-1 dark:text-clay-300">
                     +
-                  </span>
+                  </span> */}
                   {s.k}
                 </dt>
                 <dd className="mt-2 text-xs text-ink-600 dark:text-ink-300 leading-snug">
                   {s.v}
-                  <div className="mt-0.5 font-mono text-[10px] uppercase tracking-widest text-ink-400 dark:text-ink-500">
+                  {/* <div className="mt-0.5 font-mono text-[10px] uppercase tracking-widest text-ink-400 dark:text-ink-500">
                     {s.note}
-                  </div>
+                  </div> */}
                 </dd>
               </div>
             ))}

@@ -122,7 +122,7 @@ export function GovernmentFastTrack() {
 
             {/* Headline */}
             <h2 className="mt-6 font-display text-4xl font-semibold leading-[1] tracking-editorial text-cream-50 text-balance sm:text-5xl lg:text-6xl">
-              Civil servants —{" "}
+              Civil Servants —{" "}
               <span className="font-normal text-cream-200">
                 approved in 24 hours.
               </span>

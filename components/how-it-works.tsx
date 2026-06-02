@@ -82,13 +82,13 @@ export function HowItWorks() {
             <li
               key={s.n}
               className={`group relative border-ink-200 p-7 transition hover:bg-cream-100/40 dark:border-ink-800 dark:hover:bg-ink-900/40 ${
-                idx > 0 ? "sm:border-l" : ""
+                idx > 0 ? "border-b sm:border-l" : ""
               } ${
                 idx === 2 ? "lg:border-l" : ""
               } ${idx >= 2 ? "sm:border-t lg:border-t-0" : ""}`}
             >
               <div className="flex items-baseline justify-between">
-                <span className="font-display text-7xl font-medium leading-none tracking-editorial text-clay-500/70 transition group-hover:text-clay-600 dark:text-clay-300/90 dark:group-hover:text-clay-300">
+                <span className="font-display text-7xl font-medium leading-none tracking-editorial text-clay-500 transition group-hover:text-clay-600 dark:text-clay-300/90 dark:group-hover:text-clay-300">
                   {s.icon || s.n}
                 </span>
               </div>

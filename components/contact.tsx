@@ -15,7 +15,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative scroll-mt-24 overflow-hidden py-24 sm:py-28"
+      className="relative scroll-mt-24 overflow-hidden py-24 pb-16 sm:py-28"
     >
       <div className="absolute inset-0 grain pointer-events-none" />
 
@@ -24,14 +24,10 @@ export function Contact() {
         <div className="grid items-end gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-clay-600 dark:text-clay-300">
-              ✦ 08 — Talk to us
+              ✦ 07 — Talk to us
             </span>
             <h2 className="mt-4 font-display text-4xl font-semibold leading-[1] tracking-editorial text-ink-900 sm:text-5xl lg:text-6xl text-balance dark:text-cream-100">
-              However you{" "}
-              <span className="italic font-normal text-clay-600 dark:text-clay-300">
-                like to chat
-              </span>{" "}
-              — we're here.
+              However you like to chat — we're here.
             </h2>
           </div>
           <p className="max-w-sm text-base leading-relaxed text-ink-600 lg:col-span-5 dark:text-ink-300">
@@ -186,7 +182,7 @@ export function Contact() {
             href={PHONE_LINK}
             className="group relative flex items-center gap-5 bg-cream-50 p-6 transition hover:bg-cream-100/60 sm:p-7 dark:bg-ink-950 dark:hover:bg-ink-900/60"
           >
-            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-ink-200 text-clay-600 transition group-hover:border-clay-500 group-hover:bg-clay-500 group-hover:text-cream-50 dark:border-ink-700 dark:text-clay-300">
+            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-ink-200  transition group-hover:border-clay-500 bg-clay-500 text-cream-50 dark:border-ink-700 dark:text-clay-200">
               <svg
                 className="h-5 w-5"
                 viewBox="0 0 24 24"
@@ -224,7 +220,7 @@ export function Contact() {
             href={EMAIL_LINK}
             className="group relative flex items-center gap-5 border-t border-ink-200 bg-cream-50 p-6 transition hover:bg-cream-100/60 sm:p-7 lg:border-l lg:border-t-0 dark:border-ink-800 dark:bg-ink-950 dark:hover:bg-ink-900/60"
           >
-            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-ink-200 text-forest-700 transition group-hover:border-forest-700 group-hover:bg-forest-700 group-hover:text-cream-50 dark:border-ink-700 dark:text-forest-300 dark:group-hover:border-forest-400 dark:group-hover:bg-forest-400 dark:group-hover:text-ink-950">
+            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-ink-200 bg-clay-500 text-cream-50 transition  dark:border-ink-700 dark:text-forest-200 dark:group-hover:border-forest-400 dark:group-hover:bg-forest-400 dark:group-hover:text-ink-950">
               <svg
                 className="h-5 w-5"
                 viewBox="0 0 24 24"
@@ -263,7 +259,7 @@ export function Contact() {
         {/* Office strip */}
         <div className="mt-8 flex flex-col items-center justify-between gap-3 border border-dashed border-ink-300 bg-cream-50/60 px-6 py-5 text-center sm:flex-row sm:text-left dark:border-ink-700 dark:bg-ink-900/40">
           <div className="flex items-center gap-3">
-            <span className="grid h-12 w-12 place-items-center rounded-full bg-clay-50 text-clay-700 dark:bg-clay-900/60 dark:text-clay-300">
+            <span className="grid h-12 w-12 place-items-center rounded-full border border-ink-700 bg-clay-50 text-clay-700 dark:bg-clay-900/60 dark:text-clay-300">
               <svg
                 className="h-6 w-6"
                 viewBox="0 0 24 24"
@@ -289,15 +285,15 @@ export function Contact() {
         </div>
 
         {/* Contact form */}
-        <div className="mt-16">
+        <div className="mt-28">
           <div className="flex items-baseline gap-3">
             <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-clay-600 dark:text-clay-300">
-              ✦ 09 — Send a message
+              ✦ 08 — Send a message
             </span>
             <span className="h-px flex-1 bg-ink-200 dark:bg-ink-800" />
           </div>
 
-          <h3 className="mt-4 max-w-3xl font-display text-3xl font-semibold leading-[1] tracking-editorial text-ink-900 sm:text-4xl lg:text-5xl text-balance dark:text-cream-100">
+          <h3 className="mt-6 max-w-3xl font-display text-3xl font-semibold leading-[1] tracking-editorial text-ink-900 sm:text-4xl lg:text-5xl text-balance dark:text-cream-100">
             Drop us a note and we'll get back to you.
           </h3>
 

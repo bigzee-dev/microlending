@@ -32,8 +32,8 @@ export function Navbar() {
     <header
       className={`sticky top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-ink-200/60 bg-cream-50 backdrop-blur-xl dark:border-ink-800/70 dark:bg-ink-950/80"
-          : "border-b border-transparent bg-cream-50"
+          ? "border-b border-ink-200/60 bg-cream-50/85 backdrop-blur-xl dark:border-ink-800/70 dark:bg-ink-950/80"
+          : "border-b border-transparent bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-10">
@@ -76,7 +76,7 @@ export function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit our Facebook page"
-            className="hidden group relative lg:grid h-10 w-10 place-items-center overflow-hidden rounded-full border border-ink-200/70 bg-cream-50/90 text-[#1465D8] backdrop-blur transition hover:border-[#1877F2] hover:bg-[#1877F2] hover:text-white dark:border-ink-600 dark:bg-white/10 dark:text-[#5BA0F7] dark:hover:bg-[#1877F2] dark:hover:text-white"
+            className="hidden lg:grid group relative h-10 w-10 place-items-center overflow-hidden rounded-full border border-ink-200/70 bg-cream-50/90 text-[#1465D8] backdrop-blur transition hover:border-[#1877F2] hover:bg-[#1877F2] hover:text-white dark:border-ink-600 dark:bg-white/10 dark:text-[#5BA0F7] dark:hover:bg-[#1877F2] dark:hover:text-white"
           >
             <span className="absolute inset-0 -z-10 scale-0 rounded-full bg-[#1877F2] transition-transform duration-500 group-hover:scale-100" />
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
@@ -111,7 +111,7 @@ export function Navbar() {
             type="button"
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-ink-200/70 bg-cream-50/90 text-ink-700 backdrop-blur dark:border-ink-600 dark:bg-white/10 dark:text-ink-200 lg:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-ink-200/70 bg-cream-50/90 text-ink-700 backdrop-blur dark:border-ink-700 dark:bg-ink-900/60 dark:text-ink-200 lg:hidden"
           >
             <svg
               className={`h-4 w-4 transition-transform duration-300 ${
@@ -143,7 +143,9 @@ export function Navbar() {
       {/* Mobile menu */}
       <div
         className={`lg:hidden ${
-          open ? "max-h-[480px] opacity-100" : "max-h-0 opacity-0"
+          open
+            ? "max-h-[480px] opacity-100"
+            : "max-h-0 opacity-0 pointer-events-none"
         } overflow-hidden transition-all duration-500`}
       >
         <div className="border-t border-ink-200/60 bg-cream-50 px-4 pb-6 pt-3 dark:border-ink-800/70 dark:bg-ink-950">

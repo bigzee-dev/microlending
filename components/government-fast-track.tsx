@@ -110,7 +110,7 @@ export function GovernmentFastTrack() {
           <div>
             {/* Eyebrow */}
             <div className="flex items-center gap-3 flex-wrap">
-              <BotswanaFlag style={{}} className="h-7 w-11" />
+              <BotswanaFlag className="h-7 w-11" />
               <span className="inline-flex items-center gap-2 rounded-full border border-cream-50/25 bg-cream-50/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-cream-200 backdrop-blur-sm">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cream-200 opacity-60" />

@@ -115,10 +115,6 @@ export function UseCases() {
               We're here to help.
             </h2>
           </div>
-          <p className="max-w-md text-base leading-relaxed text-ink-600 lg:col-span-5 dark:text-ink-300">
-            A MicroLending loan is yours to spend however you need. No
-            justification required — just the next chapter, financed.
-          </p>
         </div>
 
         <ul className="mt-16 grid gap-0 border border-ink-200 sm:grid-cols-2 lg:grid-cols-3 dark:border-ink-800">

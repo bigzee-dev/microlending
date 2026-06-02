@@ -8,7 +8,7 @@
 --------------------------------------------------------------- */
 
 :root {
-  --bg: 250 247 240;        /* warm cream */
+  --bg: 250 247 240; /* warm cream */
   --bg-elev: 253 251 246;
   --surface: 255 252 246;
   --ink: 16 13 8;
@@ -92,21 +92,43 @@ body {
 
   /* Botswana-basket inspired chevron pattern */
   .pattern-weave {
-    background-image:
-      linear-gradient(135deg, rgba(184,85,46,0.07) 25%, transparent 25%, transparent 50%, rgba(184,85,46,0.07) 50%, rgba(184,85,46,0.07) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(
+      135deg,
+      rgba(184, 85, 46, 0.07) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(184, 85, 46, 0.07) 50%,
+      rgba(184, 85, 46, 0.07) 75%,
+      transparent 75%,
+      transparent
+    );
     background-size: 18px 18px;
   }
   @media (prefers-color-scheme: dark) {
     .pattern-weave {
-      background-image:
-        linear-gradient(135deg, rgba(226,151,107,0.06) 25%, transparent 25%, transparent 50%, rgba(226,151,107,0.06) 50%, rgba(226,151,107,0.06) 75%, transparent 75%, transparent);
+      background-image: linear-gradient(
+        135deg,
+        rgba(226, 151, 107, 0.06) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(226, 151, 107, 0.06) 50%,
+        rgba(226, 151, 107, 0.06) 75%,
+        transparent 75%,
+        transparent
+      );
     }
   }
 
   /* Soft rule */
   .rule {
     height: 1px;
-    background: linear-gradient(to right, transparent, rgb(var(--rule)) 14%, rgb(var(--rule)) 86%, transparent);
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgb(var(--rule)) 14%,
+      rgb(var(--rule)) 86%,
+      transparent
+    );
   }
 
   /* Asterism — three-asterisk ornament for editorial breaks */
@@ -120,8 +142,20 @@ body {
   }
 
   .mask-fade-x {
-    -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent
+    );
   }
   .mask-fade-b {
     -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
@@ -142,10 +176,16 @@ body {
 
   /* Optical-sized display tweak */
   .display-tight {
-    font-variation-settings: "opsz" 144, "wght" 600, "SOFT" 0;
+    font-variation-settings:
+      "opsz" 144,
+      "wght" 600,
+      "SOFT" 0;
   }
   .display-italic {
-    font-variation-settings: "opsz" 144, "wght" 500, "SOFT" 100;
+    font-variation-settings:
+      "opsz" 144,
+      "wght" 500,
+      "SOFT" 100;
     font-style: italic;
   }
 }
@@ -158,6 +198,7 @@ input[type="range"].slider {
   height: 6px;
   background: transparent;
   cursor: pointer;
+  touch-action: none; /* prevent mobile scroll-stealing on drag */
 }
 
 input[type="range"].slider::-webkit-slider-runnable-track {
@@ -194,7 +235,9 @@ input[type="range"].slider::-webkit-slider-thumb {
   border: 2.5px solid rgb(var(--clay));
   margin-top: -8px;
   box-shadow: 0 8px 22px -8px rgba(184, 85, 46, 0.55);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 input[type="range"].slider:hover::-webkit-slider-thumb {
@@ -227,7 +270,10 @@ input[type="range"].slider::-moz-range-thumb {
   font-size: 0.95rem;
   color: rgb(var(--ink));
   font-family: var(--font-sans);
-  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
 }
 .field::placeholder {
   color: rgb(var(--ink-soft) / 0.6);

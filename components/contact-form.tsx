@@ -25,7 +25,7 @@ export function ContactForm() {
     >
       {/* Left rail — editorial intro */}
       <aside className="relative overflow-hidden bg-ink-950 p-8 text-cream-50 sm:p-10 lg:col-span-5 dark:bg-clay-900">
-        <div className="absolute inset-0 pattern-weave opacity-25" />
+        <div className="absolute inset-0 pattern-weave opacity-25 pointer-events-none" />
         <div className="absolute -top-16 -right-16 h-44 w-44 rounded-full bg-clay-500/30 blur-3xl" />
 
         <div className="relative">

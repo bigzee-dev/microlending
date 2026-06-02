@@ -83,10 +83,6 @@ export function LoanCalculator() {
               you apply.
             </h2>
           </div>
-          <p className="hidden max-w-xs text-sm leading-relaxed text-ink-600 sm:block dark:text-ink-300">
-            Move the dials. Every fee is on the table from the start — no
-            surprises, no small print.
-          </p>
         </div>
 
         <div className="mt-14 grid gap-px overflow-hidden border border-ink-200 bg-ink-200 lg:grid-cols-5 dark:border-ink-700 dark:bg-ink-700">
@@ -217,7 +213,7 @@ export function LoanCalculator() {
           {/* Summary panel */}
           <div className="relative overflow-hidden bg-ink-950 p-6 text-cream-50 sm:p-10 lg:col-span-2 dark:bg-clay-900">
             {/* decorative weave pattern */}
-            <div className="absolute inset-0 pattern-weave opacity-40" />
+            <div className="absolute inset-0 pattern-weave opacity-40 pointer-events-none" />
             <div className="absolute -right-12 -top-12 h-48 w-48 rounded-full bg-clay-500/30 blur-3xl" />
 
             <div className="relative">
@@ -249,7 +245,6 @@ export function LoanCalculator() {
                 <SummaryRow
                   label="Effective APR"
                   value={`${apr.toFixed(1)}%`}
-                  hint="illustrative"
                 />
                 <SummaryRow
                   label="Daily interest"

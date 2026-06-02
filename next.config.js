@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: "export",
+  allowedDevOrigins: ["10.71.50.246"],
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },

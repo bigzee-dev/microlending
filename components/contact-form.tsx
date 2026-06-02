@@ -29,14 +29,8 @@ export function ContactForm() {
         <div className="absolute -top-16 -right-16 h-44 w-44 rounded-full bg-clay-500/30 blur-3xl" />
 
         <div className="relative">
-          <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-clay-300">
-            ✦ Send us a note
-          </span>
           <h3 className="mt-4 font-display text-3xl font-medium leading-[1.05] tracking-editorial sm:text-4xl">
-            Prefer to write?{" "}
-            <span className="italic font-normal text-clay-300">
-              We're listening.
-            </span>
+            Prefer to write? We're listening.
           </h3>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-cream-200/85">
             Tell us a little about yourself and we'll reach out within one
@@ -62,15 +56,9 @@ export function ContactForm() {
               <span className="font-mono text-[10px] uppercase tracking-widest text-clay-300">
                 03
               </span>
-              <span className="text-cream-100">
-                You decide if it's a yes
-              </span>
+              <span className="text-cream-100">You decide if it's a yes</span>
             </li>
           </ul>
-
-          <p className="mt-12 font-mono text-[10px] uppercase tracking-widest text-cream-200/60">
-            ✻ confidential · no spam · no auto-dialer ✻
-          </p>
         </div>
       </aside>
 
@@ -87,7 +75,7 @@ export function ContactForm() {
               autoComplete="name"
             />
           </Field>
-          <Field label="Phone" required hint="we'll WhatsApp first">
+          <Field label="Phone" required>
             <input
               type="tel"
               name="phone"
@@ -111,9 +99,9 @@ export function ContactForm() {
 
         <Field label="Loan amount needed" hint="in Pula · optional">
           <div className="relative">
-            <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-ink-400 dark:text-ink-500">
+            {/* <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-ink-400 dark:text-ink-500">
               P
-            </span>
+            </span> */}
             <input
               type="text"
               inputMode="numeric"
@@ -125,23 +113,6 @@ export function ContactForm() {
               placeholder="3500"
               className="field pl-8 font-mono"
             />
-          </div>
-          {/* Quick chips */}
-          <div className="mt-2 flex flex-wrap gap-1.5">
-            {[1000, 2500, 5000, 10000].map((v) => (
-              <button
-                key={v}
-                type="button"
-                onClick={() => setAmount(String(v))}
-                className={`rounded-full border px-3 py-1 font-mono text-[10px] transition ${
-                  Number(amount) === v
-                    ? "border-clay-600 bg-clay-600 text-cream-50 dark:border-clay-400 dark:bg-clay-400 dark:text-ink-950"
-                    : "border-ink-200 text-ink-600 hover:border-clay-400 hover:text-clay-600 dark:border-ink-700 dark:text-ink-300 dark:hover:border-clay-400 dark:hover:text-clay-300"
-                }`}
-              >
-                P{v.toLocaleString()}
-              </button>
-            ))}
           </div>
         </Field>
 
@@ -192,7 +163,10 @@ export function ContactForm() {
           />
           <span>
             I agree to be contacted by MicroLending and have read the{" "}
-            <a href="#" className="link-underline font-medium text-ink-900 dark:text-cream-100">
+            <a
+              href="#"
+              className="link-underline font-medium text-ink-900 dark:text-cream-100"
+            >
               privacy policy
             </a>
             .
@@ -215,7 +189,7 @@ export function ContactForm() {
               ? "✓ Sent — we'll be in touch shortly."
               : status === "error"
                 ? "✕ Something went wrong. Try again?"
-                : "↳ Typically replied to within 1 business day"}
+                : ""}
           </p>
 
           <button
@@ -225,9 +199,25 @@ export function ContactForm() {
           >
             {status === "submitting" ? (
               <>
-                <svg className="h-3.5 w-3.5 animate-spin" viewBox="0 0 24 24" fill="none">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeOpacity="0.25" strokeWidth="3" />
-                  <path d="M22 12a10 10 0 0 1-10 10" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                <svg
+                  className="h-3.5 w-3.5 animate-spin"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeOpacity="0.25"
+                    strokeWidth="3"
+                  />
+                  <path
+                    d="M22 12a10 10 0 0 1-10 10"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
                 </svg>
                 Sending…
               </>
@@ -235,7 +225,15 @@ export function ContactForm() {
               <>
                 Send message
                 <span className="grid h-6 w-6 place-items-center rounded-full bg-cream-50/15 transition group-hover:translate-x-0.5 dark:bg-ink-950/20">
-                  <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    className="h-3 w-3"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <path d="M5 12h14M13 5l7 7-7 7" />
                   </svg>
                 </span>

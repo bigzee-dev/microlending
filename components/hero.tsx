@@ -29,17 +29,13 @@ export function Hero() {
               ✦ 01 — Lending
             </span>
             <span className="h-px flex-1 bg-ink-200 dark:bg-ink-800" />
-            <span className="font-mono text-[11px] text-ink-400 dark:text-ink-500">
+            {/* <span className="font-mono text-[11px] text-ink-400 dark:text-ink-500">
               May 2026
-            </span>
+            </span> */}
           </div>
 
           <h1 className="mt-7 font-display text-[44px] font-semibold leading-[0.95] tracking-editorial text-ink-900 text-balance sm:text-[64px] lg:text-[78px] xl:text-[92px] dark:text-cream-100">
-            Fair credit,{" "}
-            <span className="italic font-normal text-clay-600 dark:text-clay-300">
-              made
-            </span>{" "}
-            in Gaborone.
+            Flexible, short term loans for you
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-[1.55] text-ink-700 text-pretty dark:text-ink-200">
@@ -111,7 +107,7 @@ export function Hero() {
           </dl>
 
           {/* Footnote-style trust badges */}
-          <ul className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-ink-600 dark:text-ink-300">
+          {/* <ul className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-ink-600 dark:text-ink-300">
             {[
               { sym: "§", text: "NBFIRA-aligned" },
               { sym: "†", text: "Bank-grade encryption" },
@@ -125,7 +121,7 @@ export function Hero() {
                 {b.text}
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
 
         {/* Visual column — offset image with floating ticket */}
@@ -137,7 +133,7 @@ export function Hero() {
 
             <div className="relative aspect-[4/5] overflow-hidden bg-ink-100 dark:bg-ink-800">
               <Image
-                src="/9838.jpg"
+                src="/14537.jpg"
                 alt="Botswana entrepreneur looking at her phone"
                 fill
                 className="object-cover"

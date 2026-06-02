@@ -1,38 +1,3 @@
-const testimonials = [
-  {
-    name: "Kgomotso D.",
-    role: "Teacher · Gaborone West",
-    quote:
-      "I needed money urgently to cover my child's school registration. MicroLending paid me out within 40 minutes. Honestly, I was shocked. I'll use them again.",
-    accent: "from-clay-500 to-clay-700",
-    initial: "K",
-  },
-  {
-    name: "Tumelo R.",
-    role: "Mechanic · Tlokweng",
-    quote:
-      "The website is so simple. I applied from my phone on a Saturday afternoon and bought the parts I needed before the workshop closed. Top service.",
-    accent: "from-forest-600 to-forest-800",
-    initial: "T",
-  },
-  {
-    name: "Boipelo S.",
-    role: "Nurse · Princess Marina",
-    quote:
-      "What sold me was the calculator. I knew exactly what I was going to pay back before signing anything. No tricks. Will recommend to my friends.",
-    accent: "from-marigold-500 to-marigold-700",
-    initial: "B",
-  },
-  {
-    name: "Mpho L.",
-    role: "Hair stylist · Mogoditshane",
-    quote:
-      "I was nervous because of bad experiences with other lenders, but these guys are different. Friendly call centre, fair price. Lekker.",
-    accent: "from-ink-700 to-ink-900",
-    initial: "M",
-  },
-];
-
 export function Testimonials() {
   return (
     <section className="relative border-y border-ink-200/60 bg-cream-100/40 py-24 sm:py-28 dark:border-ink-800/70 dark:bg-ink-900/30">
@@ -64,47 +29,37 @@ export function Testimonials() {
               <span className="font-mono">4.9</span>
               <span className="text-ink-400 dark:text-ink-500"> / 5</span>
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-widest text-ink-500 dark:text-ink-300">
-              n = 2,184 reviews
-            </p>
           </div>
         </div>
 
-        <div className="mt-16 grid gap-0 border border-ink-200 sm:grid-cols-2 lg:grid-cols-4 dark:border-ink-800">
-          {testimonials.map((t, idx) => (
-            <figure
-              key={t.name}
-              className={`group relative flex h-full flex-col bg-cream-50 p-7 transition hover:bg-cream-100/60 dark:bg-ink-950 dark:hover:bg-ink-900 ${
-                idx > 0 ? "sm:border-l lg:border-l" : ""
-              } ${idx === 2 ? "sm:border-l-0 lg:border-l" : ""} ${
-                idx >= 2 ? "border-t sm:border-t lg:border-t-0" : ""
-              } border-ink-200 dark:border-ink-800`}
-            >
-              <span className="font-display text-7xl italic leading-none text-clay-500 dark:text-clay-300">
-                &ldquo;
-              </span>
+        <div className="mt-16 border border-ink-200 dark:border-ink-800">
+          <figure className="group relative flex flex-col bg-cream-50 p-8 transition hover:bg-cream-100/60 sm:p-10 lg:p-14 dark:bg-ink-950 dark:hover:bg-ink-900">
+            <span className="font-display text-8xl italic leading-none text-clay-500 sm:text-9xl dark:text-clay-300">
+              &ldquo;
+            </span>
 
-              <blockquote className="-mt-6 flex-1 font-display text-base font-normal leading-snug text-ink-800 dark:text-cream-100">
-                {t.quote}
-              </blockquote>
+            <blockquote className="-mt-8 font-display text-xl font-normal leading-snug text-ink-800 sm:text-2xl lg:text-3xl lg:leading-snug text-balance dark:text-cream-100">
+              I needed money urgently to cover my child&apos;s school
+              registration. MicroLending paid me out within 40 minutes.
+              Honestly, I was shocked. I&apos;ll use them again.
+            </blockquote>
 
-              <figcaption className="mt-6 flex items-center gap-3 border-t border-ink-200 pt-4 dark:border-ink-800">
-                <span
-                  className={`grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br ${t.accent} font-display text-sm font-medium text-cream-50`}
-                >
-                  {t.initial}
-                </span>
-                <div className="leading-tight">
-                  <div className="font-display text-sm font-medium text-ink-900 dark:text-cream-100">
-                    {t.name}
-                  </div>
-                  <div className="font-mono text-[10px] uppercase tracking-widest text-ink-500 dark:text-ink-300">
-                    {t.role}
-                  </div>
+            <figcaption className="mt-8 flex items-center gap-4 border-t border-ink-200 pt-6 dark:border-ink-800">
+              <img
+                src="https://randomuser.me/api/portraits/women/36.jpg"
+                alt="Kgomotso D."
+                className="h-14 w-14 rounded-full object-cover ring-2 ring-clay-500/30 sm:h-16 sm:w-16"
+              />
+              <div className="leading-tight">
+                <div className="font-display text-base font-medium text-ink-900 sm:text-lg dark:text-cream-100">
+                  Kgomotso D.
                 </div>
-              </figcaption>
-            </figure>
-          ))}
+                <div className="font-mono text-[11px] uppercase tracking-widest text-ink-500 dark:text-ink-300">
+                  Teacher · Gaborone West
+                </div>
+              </div>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>

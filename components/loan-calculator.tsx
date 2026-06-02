@@ -255,11 +255,11 @@ export function LoanCalculator() {
                   label="Daily interest"
                   value={`${(DAILY_INTEREST * 100).toFixed(2)}%`}
                 />
-                <SummaryRow
+                {/* <SummaryRow
                   label="Time to payout"
                   value="< 60 minutes"
                   hint="business hrs"
-                />
+                /> */}
               </div>
 
               <Link

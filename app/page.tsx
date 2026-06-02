@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { LoanCalculator } from "@/components/loan-calculator";
 import { HowItWorks } from "@/components/how-it-works";
+import { GovernmentFastTrack } from "@/components/government-fast-track";
 import { WhyUs } from "@/components/why-us";
 import { UseCases } from "@/components/use-cases";
 import { Testimonials } from "@/components/testimonials";
@@ -18,11 +19,12 @@ export default function HomePage() {
         <Hero />
         <LoanCalculator />
         <HowItWorks />
+        <GovernmentFastTrack />
         <WhyUs />
         <UseCases />
         <Testimonials />
-        <FAQ />
         <Contact />
+        <FAQ />
       </main>
       <Footer />
       <WhatsAppFloat />

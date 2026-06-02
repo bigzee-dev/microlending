@@ -13,10 +13,7 @@ export function Logo({ className = "" }: { className?: string }) {
 
       <div className="flex flex-col leading-none">
         <span className="font-display text-[20px] font-semibold tracking-editorial text-ink-900 dark:text-cream-100">
-          Micro<span className="italic font-normal">Lending</span>
-        </span>
-        <span className="mt-0.5 font-mono text-[9.5px] uppercase tracking-[0.22em] text-ink-500 dark:text-ink-300">
-          Est. Gaborone · BW
+          MicroLending
         </span>
       </div>
     </div>

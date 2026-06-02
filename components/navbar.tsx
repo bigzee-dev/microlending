@@ -61,7 +61,7 @@ export function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat on WhatsApp"
-            className="group relative grid h-10 w-10 place-items-center overflow-hidden rounded-full border border-ink-200/70 bg-cream-50/90 text-[#1FAE54] backdrop-blur transition hover:border-[#25D366] hover:bg-[#25D366] hover:text-white dark:border-ink-600 dark:bg-white/10 dark:text-[#5BD389] dark:hover:bg-[#25D366] dark:hover:text-white"
+            className="hidden lg:grid group relative h-10 w-10 place-items-center overflow-hidden rounded-full border border-ink-200/70 bg-cream-50/90 text-[#1FAE54] backdrop-blur transition hover:border-[#25D366] hover:bg-[#25D366] hover:text-white dark:border-ink-600 dark:bg-white/10 dark:text-[#5BD389] dark:hover:bg-[#25D366] dark:hover:text-white"
           >
             <span className="absolute inset-0 -z-10 scale-0 rounded-full bg-[#25D366] transition-transform duration-500 group-hover:scale-100" />
             <svg viewBox="0 0 32 32" className="h-4 w-4" fill="currentColor">
@@ -76,7 +76,7 @@ export function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit our Facebook page"
-            className="group relative grid h-10 w-10 place-items-center overflow-hidden rounded-full border border-ink-200/70 bg-cream-50/90 text-[#1465D8] backdrop-blur transition hover:border-[#1877F2] hover:bg-[#1877F2] hover:text-white dark:border-ink-600 dark:bg-white/10 dark:text-[#5BA0F7] dark:hover:bg-[#1877F2] dark:hover:text-white"
+            className="hidden group relative lg:grid h-10 w-10 place-items-center overflow-hidden rounded-full border border-ink-200/70 bg-cream-50/90 text-[#1465D8] backdrop-blur transition hover:border-[#1877F2] hover:bg-[#1877F2] hover:text-white dark:border-ink-600 dark:bg-white/10 dark:text-[#5BA0F7] dark:hover:bg-[#1877F2] dark:hover:text-white"
           >
             <span className="absolute inset-0 -z-10 scale-0 rounded-full bg-[#1877F2] transition-transform duration-500 group-hover:scale-100" />
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
@@ -111,7 +111,7 @@ export function Navbar() {
             type="button"
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-ink-200/70 bg-cream-50/90 text-ink-700 backdrop-blur dark:border-ink-700 dark:bg-ink-900/60 dark:text-ink-200 lg:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-ink-200/70 bg-cream-50/90 text-ink-700 backdrop-blur dark:border-ink-600 dark:bg-white/10 dark:text-ink-200 lg:hidden"
           >
             <svg
               className={`h-4 w-4 transition-transform duration-300 ${

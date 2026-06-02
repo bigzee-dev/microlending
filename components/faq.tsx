@@ -49,10 +49,7 @@ export function FAQ() {
               ✦ 07 — Questions
             </span>
             <h2 className="mt-4 font-display text-4xl font-semibold leading-[1] tracking-editorial text-ink-900 sm:text-5xl lg:text-6xl text-balance dark:text-cream-100">
-              Everything you{" "}
-              <span className="italic font-normal text-clay-600 dark:text-clay-300">
-                need to know.
-              </span>
+              Everything you need to know.
             </h2>
           </div>
           <p className="max-w-sm text-base leading-relaxed text-ink-600 lg:col-span-5 dark:text-ink-300">

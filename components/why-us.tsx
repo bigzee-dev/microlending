@@ -13,8 +13,8 @@ const features = [
   },
   {
     n: "iii.",
-    title: "Bank-grade security",
-    body: "Your data is encrypted end-to-end and never sold. We use the same standards as your bank.",
+    title: "Cash in your account",
+    body: "Once approved, your money lands in your Botswana bank account",
   },
   {
     n: "iv.",
@@ -96,7 +96,7 @@ export function WhyUs() {
         <article className="relative mt-20 grid gap-0 border border-ink-200 dark:border-ink-800 lg:grid-cols-2">
           <div className="relative min-h-[300px] lg:min-h-[440px]">
             <Image
-              src="/1916.jpg"
+              src="/76136.jpg"
               alt="Gaborone skyline"
               fill
               className="object-cover"
@@ -109,16 +109,9 @@ export function WhyUs() {
           </div>
 
           <div className="bg-cream-50 p-8 sm:p-12 dark:bg-ink-950">
-            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-clay-600 dark:text-clay-300">
-              local · trusted · regulated
-            </span>
             <blockquote className="mt-5 font-display text-2xl font-normal leading-[1.15] tracking-editorial text-ink-900 sm:text-3xl dark:text-cream-100">
               &ldquo;The team understood what I needed and got me sorted before
-              my next pay-cheque.{" "}
-              <span className="italic text-clay-600 dark:text-clay-300">
-                Real lifesavers.
-              </span>
-              &rdquo;
+              my next pay-cheque. Real lifesavers. &rdquo;
             </blockquote>
             <cite className="mt-5 block font-mono text-[11px] uppercase tracking-widest not-italic text-ink-500 dark:text-ink-300">
               — Lesego M., small business owner, Mogoditshane

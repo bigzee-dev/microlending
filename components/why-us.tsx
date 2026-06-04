@@ -87,7 +87,7 @@ export function WhyUs() {
         <article className="relative mt-20 grid gap-0 border border-ink-200 dark:border-ink-800 lg:grid-cols-2">
           <div className="relative min-h-[300px] lg:min-h-[440px]">
             <Image
-              src="/76136.jpg"
+              src="/761368.jpg"
               alt="Gaborone skyline"
               fill
               className="object-cover"

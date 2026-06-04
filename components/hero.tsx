@@ -123,7 +123,7 @@ export function Hero() {
 
             <div className="relative aspect-[4/5] overflow-hidden bg-ink-100 dark:bg-ink-800">
               <Image
-                src="/14537.jpg"
+                src="/111122.jpg"
                 alt="Botswana entrepreneur looking at her phone"
                 fill
                 className="object-cover"

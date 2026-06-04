@@ -72,9 +72,6 @@ export function LoanCalculator() {
         {/* Section header */}
         <div className="flex items-end justify-between gap-6">
           <div>
-            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-clay-600 dark:text-clay-300">
-              ✦ 02 — Calculate
-            </span>
             <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1] tracking-editorial text-ink-900 sm:text-5xl lg:text-6xl text-balance dark:text-cream-100">
               See what you'll repay,{" "}
               <span className="italic font-normal text-clay-600 dark:text-clay-300">
@@ -91,7 +88,7 @@ export function LoanCalculator() {
             {/* Amount */}
             <div className="flex items-baseline gap-3">
               <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-clay-600 dark:text-clay-300">
-                ¶ principal
+                Amount
               </span>
               <span className="h-px flex-1 bg-ink-200 dark:bg-ink-800" />
               <span className="font-mono text-[10px] uppercase tracking-widest text-ink-400 dark:text-ink-500">
@@ -101,8 +98,8 @@ export function LoanCalculator() {
 
             <div className="mt-3 flex items-end justify-between">
               <div className="font-display text-[56px] font-medium leading-none tracking-editorial text-ink-900 sm:text-[72px] dark:text-cream-100">
-                <span className="text-ink-400 dark:text-ink-500">P</span>
-                <span className="font-mono">{amount.toLocaleString()}</span>
+                <span className="text-ink-600 dark:text-ink-400">P</span>
+                <span>{amount.toLocaleString()}</span>
               </div>
               <div className="flex gap-1.5">
                 <CounterBtn
@@ -143,7 +140,7 @@ export function LoanCalculator() {
             {/* Term */}
             <div className="mt-12 flex items-baseline gap-3">
               <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-clay-600 dark:text-clay-300">
-                § term
+                Term
               </span>
               <span className="h-px flex-1 bg-ink-200 dark:bg-ink-800" />
               <span className="font-mono text-[10px] uppercase tracking-widest text-ink-400 dark:text-ink-500">
@@ -153,7 +150,7 @@ export function LoanCalculator() {
 
             <div className="mt-3 flex items-end justify-between gap-3">
               <div className="font-display text-[56px] font-medium leading-none tracking-editorial text-ink-900 sm:text-[72px] dark:text-cream-100">
-                <span className="font-mono">{days}</span>
+                <span>{days}</span>
                 <span className="ml-2 font-display italic text-xl font-normal text-ink-500 dark:text-ink-300">
                   days
                 </span>
@@ -225,7 +222,7 @@ export function LoanCalculator() {
               <div className="mt-5">
                 <div className="font-display text-5xl font-medium leading-[0.95] tracking-editorial sm:text-6xl">
                   <span className="text-clay-300/70">P</span>
-                  <span className="font-mono">
+                  <span>
                     {new Intl.NumberFormat("en-BW", {
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 2,

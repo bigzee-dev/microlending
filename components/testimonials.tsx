@@ -6,9 +6,6 @@ export function Testimonials() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="grid items-end gap-8 lg:grid-cols-12">
           <div className="lg:col-span-8">
-            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-clay-300">
-              ✦ 06 — Voices
-            </span>
             <h2 className="mt-4 font-display text-4xl font-semibold leading-[1] tracking-editorial text-cream-100 sm:text-5xl lg:text-6xl text-balance">
               Loved by Batswana from{" "}
               <span className="italic font-normal text-clay-300">

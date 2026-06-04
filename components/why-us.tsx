@@ -28,8 +28,8 @@ const features = [
   },
   {
     n: "vi.",
-    title: "Real human support",
-    body: "Call, WhatsApp or email — our Gaborone team is ready six days a week. No bots, no scripts.",
+    title: "Customer service",
+    body: "Call, WhatsApp or email — our team is ready six days a week. ",
   },
 ];
 
@@ -44,9 +44,6 @@ export function WhyUs() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="grid items-end gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-clay-600 dark:text-clay-300">
-              ✦ 04 — Trust
-            </span>
             <h2 className="mt-4 font-display text-4xl font-semibold leading-[1] tracking-editorial text-ink-900 sm:text-5xl lg:text-6xl text-balance dark:text-cream-100">
               Lending built on{" "}
               <span className="italic font-normal text-clay-600 dark:text-clay-300">
@@ -58,7 +55,7 @@ export function WhyUs() {
           <p className="max-w-md text-base leading-relaxed text-ink-600 lg:col-span-5 dark:text-ink-300">
             We started MicroLending because Batswana deserve better than
             predatory lenders. Lend a fair amount, charge a fair price, treat
-            every customer like a neighbour — because in Gaborone, they probably
+            every customer like a neighbour — because in Botswana, they probably
             are.
           </p>
         </div>
@@ -68,13 +65,7 @@ export function WhyUs() {
           {features.map((f, idx) => (
             <div
               key={f.title}
-              className={`group relative bg-cream-50 p-7 transition hover:bg-cream-100/60 sm:p-9 dark:bg-ink-950 dark:hover:bg-ink-900/60 ${
-                idx % 2 === 1 ? "sm:border-l" : ""
-              } ${
-                idx === 2 || idx === 5 ? "lg:border-l" : ""
-              } ${idx >= 2 ? "border-t sm:border-t" : ""} ${
-                idx >= 3 ? "lg:border-t" : ""
-              } border-ink-200 dark:border-ink-800`}
+              className={`group relative bg-cream-50 p-7 border transition hover:bg-cream-100/60 sm:p-9 dark:bg-ink-950 dark:hover:bg-ink-900/60  border-ink-100 dark:border-ink-800`}
             >
               <span className="font-display text-3xl italic text-clay-500 dark:text-clay-300">
                 {f.n}
@@ -108,31 +99,14 @@ export function WhyUs() {
             </span>
           </div>
 
-          <div className="bg-cream-50 p-8 sm:p-12 dark:bg-ink-950">
-            <blockquote className="mt-5 font-display text-2xl font-normal leading-[1.15] tracking-editorial text-ink-900 sm:text-3xl dark:text-cream-100">
+          <div className="bg-cream-50 p-8 sm:p-12 dark:bg-ink-950 flex flex-col justify-center">
+            <blockquote className="mt-5 font-display text-2xl font-medium leading-[1.15] tracking-editorial text-ink-900 sm:text-3xl dark:text-cream-100">
               &ldquo;The team understood what I needed and got me sorted before
               my next pay-cheque. Real lifesavers. &rdquo;
             </blockquote>
             <cite className="mt-5 block font-mono text-[11px] uppercase tracking-widest not-italic text-ink-500 dark:text-ink-300">
               — Lesego M., small business owner, Mogoditshane
             </cite>
-
-            <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-ink-200 pt-6 dark:border-ink-800">
-              {[
-                { k: "P1.2M+", v: "Disbursed weekly" },
-                { k: "Mon–Sat", v: "Support hours" },
-                { k: "98%", v: "Approval insight" },
-              ].map((s) => (
-                <div key={s.v}>
-                  <dt className="font-display text-2xl font-medium tracking-editorial text-ink-900 dark:text-cream-100">
-                    <span className="font-mono">{s.k}</span>
-                  </dt>
-                  <dd className="mt-1 text-[11px] uppercase tracking-widest text-ink-500 font-mono dark:text-ink-300">
-                    {s.v}
-                  </dd>
-                </div>
-              ))}
-            </dl>
           </div>
         </article>
       </div>

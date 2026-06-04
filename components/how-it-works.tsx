@@ -63,16 +63,13 @@ export function HowItWorks() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="grid items-end gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-clay-600 dark:text-clay-300">
-              ✦ 03 — Process
-            </span>
             <h2 className="mt-4 max-w-2xl font-display text-4xl font-semibold leading-[1] tracking-editorial text-ink-900 sm:text-5xl lg:text-6xl text-balance dark:text-cream-100">
               What you'll need
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-ink-600 lg:col-span-5 dark:text-ink-300">
-            No branches. No paperwork. No queues. Just four straightforward
-            steps — designed for the Botswana lifestyle.
+            Minimal paperwork. No queues. Just four straightforward steps —
+            designed for the Botswana lifestyle.
           </p>
         </div>
 
@@ -81,7 +78,7 @@ export function HowItWorks() {
           {steps.map((s, idx) => (
             <li
               key={s.n}
-              className={`group relative border-ink-200 p-7 transition hover:bg-cream-100/40 dark:border-ink-800 dark:hover:bg-ink-900/40 border`}
+              className={`group relative border-ink-100 p-7 transition hover:bg-cream-100/40 dark:border-ink-800 dark:hover:bg-ink-900/40 border`}
             >
               <div className="flex items-baseline justify-between">
                 <span className="font-display text-7xl font-medium leading-none tracking-editorial text-clay-500 transition group-hover:text-clay-600 dark:text-clay-300/90 dark:group-hover:text-clay-300">

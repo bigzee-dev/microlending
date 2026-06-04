@@ -24,16 +24,6 @@ export function Hero() {
       <div className="mx-auto grid max-w-7xl gap-12 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 lg:pb-24 lg:pt-16">
         {/* Editorial copy column */}
         <div className="lg:col-span-7 lg:pt-2">
-          <div className="flex items-center gap-3">
-            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-clay-600 dark:text-clay-300">
-              ✦ 01 — Lending
-            </span>
-            <span className="h-px flex-1 bg-ink-200 dark:bg-ink-800" />
-            {/* <span className="font-mono text-[11px] text-ink-400 dark:text-ink-500">
-              May 2026
-            </span> */}
-          </div>
-
           <h1 className="mt-7 font-display text-[44px] font-semibold leading-[0.95] tracking-editorial text-ink-900 text-balance sm:text-[64px] lg:text-[78px] xl:text-[92px] dark:text-cream-100">
             Flexible, short term loans for you
           </h1>
@@ -85,8 +75,8 @@ export function Hero() {
           {/* Editorial stat ledger */}
           <dl className="mt-12 grid max-w-2xl grid-cols-3 gap-x-6 border-t border-ink-200 pt-7 dark:border-ink-800">
             {[
-              { k: "20,184", v: "Loans funded since launch", note: "to date" },
-              { k: "58 min", v: "Median time to payout", note: "business hrs" },
+              { k: "9,184", v: "Loans funded", note: "to date" },
+              { k: "58 min", v: "Time to payout", note: "business hrs" },
               { k: "4.9 / 5", v: "Customer rating", note: "n = 2,184" },
             ].map((s) => (
               <div key={s.v} className="relative">
@@ -197,7 +187,7 @@ export function Hero() {
           </div>
 
           {/* Hand-set quote stack */}
-          <div className="mt-8 hidden items-center gap-4 sm:flex">
+          <div className="mt-8 flex items-center gap-4 sm:flex">
             <div className="flex -space-x-2">
               {["B85530", "264A36", "D99008"].map((c) => (
                 <div
@@ -220,17 +210,22 @@ export function Hero() {
       <div className="border-y border-ink-200/60 bg-cream-100/50 py-5 dark:border-ink-800/70 dark:bg-ink-900/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <div className="flex items-center gap-5 text-[10px] uppercase tracking-[0.3em] text-ink-500 dark:text-ink-300">
-            <span className="font-mono shrink-0">Partner banks ⟶</span>
+            <span className="block sm:hidden font-mono shrink-0">
+              Partners⟶
+            </span>
+            <span className="hidden sm:block font-mono shrink-0">
+              Partner banks ⟶
+            </span>
             <div className="mask-fade-x overflow-hidden">
               <div className="flex w-max animate-marquee items-center gap-12 whitespace-nowrap">
                 {[...Array(2)].flatMap((_, dup) =>
                   [
-                    "First National Bank",
+                    "FNB",
                     "Standard Chartered",
                     "Stanbic Bank",
-                    "Absa Botswana",
+                    "Absa",
                     "Bank Gaborone",
-                    "BancABC",
+                    "Access",
                     "First Capital",
                     "Bank of Baroda",
                   ].map((name) => (

@@ -23,9 +23,6 @@ export function Contact() {
         {/* Section header */}
         <div className="grid items-end gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-clay-600 dark:text-clay-300">
-              ✦ 07 — Talk to us
-            </span>
             <h2 className="mt-4 font-display text-4xl font-semibold leading-[1] tracking-editorial text-ink-900 sm:text-5xl lg:text-6xl text-balance dark:text-cream-100">
               However you like to chat — we're here.
             </h2>
@@ -286,13 +283,6 @@ export function Contact() {
 
         {/* Contact form */}
         <div className="mt-28">
-          <div className="flex items-baseline gap-3">
-            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-clay-600 dark:text-clay-300">
-              ✦ 08 — Send a message
-            </span>
-            <span className="h-px flex-1 bg-ink-200 dark:bg-ink-800" />
-          </div>
-
           <h3 className="mt-6 max-w-3xl font-display text-3xl font-semibold leading-[1] tracking-editorial text-ink-900 sm:text-4xl lg:text-5xl text-balance dark:text-cream-100">
             Drop us a note and we'll get back to you.
           </h3>

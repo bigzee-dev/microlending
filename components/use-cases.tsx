@@ -1,19 +1,13 @@
+import { FaCar } from "react-icons/fa";
+import { LuHouse } from "react-icons/lu";
+import { MdOutlineBusinessCenter } from "react-icons/md";
+import { FaUsers } from "react-icons/fa6";
+
 const cases = [
   {
     title: "Household emergencies",
     body: "Burst geyser? Broken fridge? Cover unexpected home costs without dipping into savings.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6" />
-      </svg>
-    ),
+    icon: <LuHouse className="h-5 w-5" />,
   },
   {
     title: "School fees & uniforms",
@@ -51,54 +45,17 @@ const cases = [
   {
     title: "Car repairs",
     body: "Get your wheels back on the road quickly. Pay the mechanic, drive to work, repay later.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="6.5" cy="16.5" r="2.5" />
-        <circle cx="17.5" cy="16.5" r="2.5" />
-        <path d="M3 16.5V11l3-6h11l3 6v5.5" />
-      </svg>
-    ),
+    icon: <FaCar className="h-5 w-5" />,
   },
   {
     title: "Small business cashflow",
     body: "Cover stock or a once-off opportunity. Get back to running your hustle, fast.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M20 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-      </svg>
-    ),
+    icon: <MdOutlineBusinessCenter className="h-5 w-5" />,
   },
   {
     title: "Family obligations",
     body: "Help with funerals, weddings, or family responsibilities — without the stress of waiting.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="9" cy="8" r="3.5" />
-        <circle cx="17" cy="9" r="2.5" />
-        <path d="M2 21v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1M16 21v-1a4 4 0 0 1 4-4h2" />
-      </svg>
-    ),
+    icon: <FaUsers className="h-5 w-5" />,
   },
 ];
 
@@ -108,9 +65,6 @@ export function UseCases() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="grid items-end gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-clay-600 dark:text-clay-300">
-              ✦ 05 — Uses
-            </span>
             <h2 className="mt-4 font-display text-4xl font-semibold leading-[1] tracking-editorial text-ink-900 sm:text-5xl lg:text-6xl text-balance dark:text-cream-100">
               We're here to help.
             </h2>
@@ -121,14 +75,11 @@ export function UseCases() {
           {cases.map((c, idx) => (
             <li
               key={c.title}
-              className={`group relative flex flex-col bg-cream-50 p-7 transition hover:bg-clay-50/60 sm:p-8 dark:bg-ink-950 dark:hover:bg-clay-950/40 ${
-                idx % 2 === 1 ? "sm:border-l" : ""
-              } ${idx === 2 || idx === 5 ? "lg:border-l" : ""} ${
-                idx >= 2 ? "border-t" : ""
-              } ${idx >= 3 ? "lg:border-t" : ""} border-ink-200 dark:border-ink-800`}
+              className={`group relative flex flex-col border bg-cream-50 p-7 transition border-ink-100 dark:border-ink-700 hover:bg-clay-50/60 sm:p-8 dark:bg-ink-950 dark:hover:bg-clay-950/40 
+               `}
             >
               <div className="flex items-start justify-between">
-                <span className="grid h-12 w-12 place-items-center rounded-full border border-ink-200 text-clay-600 transition group-hover:border-clay-500 group-hover:bg-clay-500 group-hover:text-cream-50 dark:border-ink-600 dark:text-clay-300 dark:group-hover:border-clay-400 dark:group-hover:bg-clay-400 dark:group-hover:text-ink-950">
+                <span className="text-ink-100 grid h-12 w-12 place-items-center rounded-full border border-ink-200 bg-clay-600 transition group-hover:border-clay-500 group-hover:bg-clay-500 group-hover:text-cream-50 dark:border-ink-600 dark:text-clay-300 dark:group-hover:border-clay-400 dark:group-hover:bg-clay-400 dark:group-hover:text-ink-950">
                   <span className="h-5 w-5">{c.icon}</span>
                 </span>
                 <span className="font-mono text-[10px] uppercase tracking-widest text-ink-400 dark:text-ink-500">

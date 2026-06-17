@@ -65,10 +65,10 @@ export function Hero() {
               href="#how-it-works"
               className="link-underline inline-flex items-center gap-2 py-3 text-sm font-medium text-ink-900 dark:text-cream-100"
             >
+              How it works
               <span className="font-mono text-[11px] text-clay-600 dark:text-clay-300">
                 →
               </span>
-              How it works
             </Link>
           </div>
 

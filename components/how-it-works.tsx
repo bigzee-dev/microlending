@@ -50,8 +50,8 @@ const steps = [
   // },
   {
     n: "IV",
-    title: "Bank account details",
-    body: "Once approved, your money lands in your Botswana bank account — usually within an hour, on business days.",
+    title: "Latest Payslip",
+    body: "Provide your latest payslip to confirm your income and repayment capacity.",
     duration: "as agreed",
     icon: <BsBank2 />,
   },
@@ -68,8 +68,8 @@ export function HowItWorks() {
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-ink-600 lg:col-span-5 dark:text-ink-300">
-            Minimal paperwork. No queues. Just four straightforward steps —
-            designed for the Botswana lifestyle.
+            Our KYC is straightforward, simple and secure — designed for the
+            Botswana lifestyle.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ export function HowItWorks() {
               className={`group relative border-ink-100 p-7 transition hover:bg-cream-100/40 dark:border-ink-800 dark:hover:bg-ink-900/40 border`}
             >
               <div className="flex items-baseline justify-between">
-                <span className="font-display text-7xl font-medium leading-none tracking-editorial text-clay-500 transition group-hover:text-clay-600 dark:text-clay-300/90 dark:group-hover:text-clay-300">
+                <span className="font-display text-7xl font-medium leading-none tracking-editorial text-clay-600 transition group-hover:text-clay-600 dark:text-clay-300/90 dark:group-hover:text-clay-300">
                   {s.icon || s.n}
                 </span>
               </div>

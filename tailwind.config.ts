@@ -32,19 +32,19 @@ const config: Config = {
           900: "#100d08",
           950: "#0a0805",
         },
-        // Terracotta / clay — primary accent
+        // Cyan / turquoise — primary accent
         clay: {
-          50: "#fcf4ee",
-          100: "#f7e3d2",
-          200: "#eebfa1",
-          300: "#e1976b",
-          400: "#d27145",
-          500: "#b8552e",
-          600: "#9a3f23",
-          700: "#7c321f",
-          800: "#622a1d",
-          900: "#502519",
-          950: "#2c100a",
+          50: "#ecfeff",
+          100: "#cffafe",
+          200: "#a5f3fc",
+          300: "#67e8f9",
+          400: "#22d3ee",
+          500: "#06b6d4",
+          600: "#0891b2",
+          700: "#0e7490",
+          800: "#155e75",
+          900: "#164e63",
+          950: "#083344",
         },
         // Deep forest green — secondary accent
         forest: {
@@ -75,13 +75,13 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],
-        sans: [
-          "var(--font-sans)",
+        display: [
+          "var(--font-display)",
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
         ],
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
         mono: [
           "var(--font-mono)",
           "ui-monospace",
@@ -118,7 +118,8 @@ const config: Config = {
         "ticker-up": "ticker-up 0.25s ease-out forwards",
       },
       boxShadow: {
-        "edge-clay": "0 1px 0 0 rgba(184, 85, 46, 0.16), 0 18px 50px -28px rgba(184, 85, 46, 0.45)",
+        "edge-clay":
+          "0 1px 0 0 rgba(184, 85, 46, 0.16), 0 18px 50px -28px rgba(184, 85, 46, 0.45)",
         editorial: "0 30px 60px -30px rgba(20, 14, 8, 0.35)",
       },
     },

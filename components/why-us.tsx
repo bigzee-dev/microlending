@@ -67,7 +67,7 @@ export function WhyUs() {
               key={f.title}
               className={`group relative bg-cream-50 p-7 border transition hover:bg-cream-100/60 sm:p-9 dark:bg-ink-950 dark:hover:bg-ink-900/60  border-ink-100 dark:border-ink-800`}
             >
-              <span className="font-display text-3xl italic text-clay-500 dark:text-clay-300">
+              <span className="font-display text-3xl italic text-clay-600 dark:text-clay-300">
                 {f.n}
               </span>
               <h3 className="mt-4 font-display text-xl font-medium tracking-tight text-ink-900 dark:text-cream-100">
@@ -84,7 +84,7 @@ export function WhyUs() {
         </div>
 
         {/* Editorial spotlight */}
-        <article className="relative mt-20 grid gap-0 border border-ink-200 dark:border-ink-800 lg:grid-cols-2">
+        {/* <article className="relative mt-20 grid gap-0 border border-ink-200 dark:border-ink-800 lg:grid-cols-2">
           <div className="relative min-h-[300px] lg:min-h-[440px]">
             <Image
               src="/761368.jpg"
@@ -108,7 +108,7 @@ export function WhyUs() {
               — Lesego M., small business owner, Mogoditshane
             </cite>
           </div>
-        </article>
+        </article> */}
       </div>
     </section>
   );

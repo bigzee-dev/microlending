@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Logo } from "./logo";
 
 const links = [
-  { href: "#calculator", label: "Calculator", n: "01" },
+  { href: "#calculator", label: "Loan Calculator", n: "01" },
   { href: "#how-it-works", label: "Process", n: "02" },
   { href: "#why-us", label: "Why us", n: "03" },
   { href: "#faq", label: "Questions", n: "04" },
@@ -30,18 +30,18 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-500 ${
+      className={`top-0 z-50 transition-all duration-500 bg-clay-500/80{
         scrolled
-          ? "border-b border-ink-200/60 bg-cream-50/85 backdrop-blur-xl dark:border-ink-800/70 dark:bg-ink-950/80"
+          ? "border-b border-ink-200/60  dark:border-ink-800/70 dark:bg-ink-950/80"
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 py-2">
         <Link href="/" aria-label="MicroLending home" className="shrink-0">
           <Logo />
         </Link>
 
-        {/* Editorial nav with numerals */}
+        {/* Editorial nav  */}
         <nav className="hidden items-center gap-1 lg:flex">
           {links.map((l) => (
             <Link
@@ -111,7 +111,7 @@ export function Navbar() {
             type="button"
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-ink-200/70 bg-cream-50/90 text-ink-700 backdrop-blur dark:border-ink-700 dark:bg-ink-900/60 dark:text-ink-200 lg:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-ink-200/70 bg-cream-50/90 text-ink-700  dark:border-ink-700 dark:bg-ink-900/60 dark:text-ink-200 lg:hidden"
           >
             <svg
               className={`h-4 w-4 transition-transform duration-300 ${
@@ -146,7 +146,7 @@ export function Navbar() {
           open
             ? "max-h-[480px] opacity-100"
             : "max-h-0 opacity-0 pointer-events-none"
-        } overflow-hidden transition-all duration-500`}
+        } overflow-hidden duration-500`}
       >
         <div className="border-t border-ink-200/60 bg-cream-50 px-4 pb-6 pt-3 dark:border-ink-800/70 dark:bg-ink-950">
           <nav className="flex flex-col divide-y divide-ink-100 dark:divide-ink-800">

@@ -5,6 +5,7 @@ import { HowItWorks } from "@/components/how-it-works";
 import { GovernmentFastTrack } from "@/components/government-fast-track";
 import { WhyUs } from "@/components/why-us";
 import { UseCases } from "@/components/use-cases";
+import { LoanTable } from "@/components/loan-table";
 import { Testimonials } from "@/components/testimonials";
 import { FAQ } from "@/components/faq";
 import { Contact } from "@/components/contact";
@@ -21,6 +22,7 @@ export default function HomePage() {
         <HowItWorks />
         <GovernmentFastTrack />
         <WhyUs />
+        <LoanTable />
         <UseCases />
         <Testimonials />
         <Contact />

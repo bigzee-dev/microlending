@@ -35,10 +35,10 @@ export function Hero() {
             </span>{" "}
             up to{" "}
             <span className="font-mono text-base font-medium text-ink-900 dark:text-cream-100">
-              P15,000
+              P6,000
             </span>
-            , paid out in less than an hour. No paperwork. No queues. Built in
-            Botswana for Batswana.
+            , paid straight out to your bank account. Low interest rates.
+            Minimal paperwork. Fast Applications. Fast Approvals.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -75,8 +75,8 @@ export function Hero() {
           {/* Editorial stat ledger */}
           <dl className="mt-12 grid max-w-2xl grid-cols-3 gap-x-6 border-t border-ink-200 pt-7 dark:border-ink-800">
             {[
-              { k: "9,184", v: "Loans funded", note: "to date" },
-              { k: "58 min", v: "Time to payout", note: "business hrs" },
+              { k: "918", v: "Loans funded", note: "to date" },
+              { k: "24 hrs", v: "Fast Approval", note: "business hrs" },
               { k: "4.9 / 5", v: "Customer rating", note: "n = 2,184" },
             ].map((s) => (
               <div key={s.v} className="relative">
@@ -137,7 +137,8 @@ export function Hero() {
               {/* Editorial caption */}
               <figcaption className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3 text-cream-50">
                 <p className="font-display italic text-sm leading-snug">
-                  &ldquo;Took five minutes. Paid me out before lunch.&rdquo;
+                  &ldquo;My application was processed fast and
+                  efficiently.&rdquo;
                 </p>
                 <span className="font-mono text-[10px] uppercase tracking-widest text-cream-200/80">
                   Fig. 01
@@ -209,25 +210,22 @@ export function Hero() {
       {/* Newspaper-style banker strip */}
       <div className="border-y border-ink-200/60 bg-cream-100/50 py-5 dark:border-ink-800/70 dark:bg-ink-900/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-          <div className="flex items-center gap-5 text-[10px] uppercase tracking-[0.3em] text-ink-500 dark:text-ink-300">
+          <div className="flex items-center gap-5 text-[12px] uppercase tracking-[0.3em] text-ink-500 dark:text-ink-300">
             <span className="block sm:hidden font-mono shrink-0">
-              Partners⟶
+              Services⟶
             </span>
             <span className="hidden sm:block font-mono shrink-0">
-              Partner banks ⟶
+              our services ⟶
             </span>
             <div className="mask-fade-x overflow-hidden">
               <div className="flex w-max animate-marquee items-center gap-12 whitespace-nowrap">
                 {[...Array(2)].flatMap((_, dup) =>
                   [
-                    "FNB",
-                    "Standard Chartered",
-                    "Stanbic Bank",
-                    "Absa",
-                    "Bank Gaborone",
-                    "Access",
-                    "First Capital",
-                    "Bank of Baroda",
+                    "Quick Cash Loans",
+                    "Personal Loans",
+                    "Pay Day Loans",
+                    "Business Loans",
+                    "Purchase Orders Financing",
                   ].map((name) => (
                     <span
                       key={`${dup}-${name}`}

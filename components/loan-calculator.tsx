@@ -4,16 +4,34 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 
 const MIN_AMOUNT = 500;
-const MAX_AMOUNT = 15000;
+const MAX_AMOUNT = 6000;
 const STEP_AMOUNT = 100;
 
 const MIN_DAYS = 7;
 const MAX_DAYS = 90;
 
-const DAILY_INTEREST = 0.0035;
-const INITIATION_FEE_PCT = 0.05;
-const INITIATION_FEE_CAP = 750;
-const SERVICE_FEE_PER_MONTH = 60;
+// 1-month rates are tiered by loan amount
+const INTEREST_TIERS_1M = [
+  { min: 6000, rate: 0.165 },
+  { min: 5000, rate: 0.175 },
+  { min: 4000, rate: 0.185 },
+  { min: 3000, rate: 0.195 },
+  { min: 2000, rate: 0.205 },
+  { min: 500,  rate: 0.25  },
+];
+
+// 2- and 3-month rates are flat regardless of loan amount
+const RATE_2_MONTHS = 0.205;
+const RATE_3_MONTHS = 0.195;
+
+function getMonthlyRate(amount: number, months: number): number {
+  if (months === 2) return RATE_2_MONTHS;
+  if (months >= 3) return RATE_3_MONTHS;
+  for (const tier of INTEREST_TIERS_1M) {
+    if (amount >= tier.min) return tier.rate;
+  }
+  return 0.25;
+}
 
 const PULA = (n: number) =>
   new Intl.NumberFormat("en-BW", {
@@ -24,28 +42,20 @@ const PULA = (n: number) =>
   }).format(n);
 
 function calc(amount: number, days: number) {
-  const interest = amount * DAILY_INTEREST * days;
-  const initiation = Math.min(amount * INITIATION_FEE_PCT, INITIATION_FEE_CAP);
   const months = Math.max(1, Math.ceil(days / 30));
-  const service = SERVICE_FEE_PER_MONTH * months;
-  const total = amount + interest + initiation + service;
+  const rate = getMonthlyRate(amount, months);
+  const interest = amount * rate * months;
+  const total = amount + interest;
   const dueDate = new Date();
   dueDate.setDate(dueDate.getDate() + days);
-  return {
-    interest,
-    initiation,
-    service,
-    total,
-    dueDate,
-    apr: ((interest + initiation + service) / amount) * (365 / days) * 100,
-  };
+  return { interest, rate, total, dueDate };
 }
 
 export function LoanCalculator() {
   const [amount, setAmount] = useState(3500);
   const [days, setDays] = useState(30);
 
-  const { interest, initiation, service, total, dueDate, apr } = useMemo(
+  const { interest, rate, total, dueDate } = useMemo(
     () => calc(amount, days),
     [amount, days],
   );
@@ -156,7 +166,11 @@ export function LoanCalculator() {
                 </span>
               </div>
               <div className="flex flex-wrap justify-end gap-1.5">
-                {[14, 30, 60, 90].map((d) => (
+                {[
+                  { days: 30, label: "1 month" },
+                  { days: 60, label: "2 months" },
+                  { days: 90, label: "3 months" },
+                ].map(({ days: d, label }) => (
                   <button
                     key={d}
                     type="button"
@@ -167,7 +181,7 @@ export function LoanCalculator() {
                         : "border-ink-300 text-ink-600 hover:border-clay-500 hover:text-clay-600 dark:border-ink-700 dark:text-ink-300 dark:hover:border-clay-400 dark:hover:text-clay-300"
                     }`}
                   >
-                    {d}d
+                    {label}
                   </button>
                 ))}
               </div>
@@ -188,23 +202,6 @@ export function LoanCalculator() {
               <span>{MAX_DAYS} days</span>
             </div>
 
-            {/* Ledger */}
-            {/* <div className="mt-12 border-t border-ink-200 pt-6 dark:border-ink-800">
-              <div className="flex items-baseline justify-between">
-                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-500 dark:text-ink-400">
-                  † Ledger
-                </span>
-                <span className="font-mono text-[10px] text-ink-400 dark:text-ink-500">
-                  All figures in BWP
-                </span>
-              </div>
-              <dl className="mt-3 divide-y divide-ink-200 dark:divide-ink-800">
-                <LedgerRow label="Principal" value={PULA(amount)} />
-                <LedgerRow label="Interest" value={PULA(interest)} note={`${(DAILY_INTEREST*100).toFixed(2)}% / day`} />
-                <LedgerRow label="Initiation fee" value={PULA(initiation)} note="5%, capped at P750" />
-                <LedgerRow label="Service fee" value={PULA(service)} note={`P${SERVICE_FEE_PER_MONTH} per month`} />
-              </dl>
-            </div> */}
           </div>
 
           {/* Summary panel */}
@@ -240,18 +237,13 @@ export function LoanCalculator() {
 
               <div className="mt-8 divide-y divide-cream-50/10 border-t border-cream-50/10">
                 <SummaryRow
-                  label="Effective APR"
-                  value={`${apr.toFixed(1)}%`}
+                  label="Monthly interest"
+                  value={`${(rate * 100).toFixed(1)}%`}
                 />
                 <SummaryRow
-                  label="Daily interest"
-                  value={`${(DAILY_INTEREST * 100).toFixed(2)}%`}
+                  label="Interest charged"
+                  value={PULA(interest)}
                 />
-                {/* <SummaryRow
-                  label="Time to payout"
-                  value="< 60 minutes"
-                  hint="business hrs"
-                /> */}
               </div>
 
               <Link
@@ -304,31 +296,6 @@ function CounterBtn({
   );
 }
 
-function LedgerRow({
-  label,
-  value,
-  note,
-}: {
-  label: string;
-  value: string;
-  note?: string;
-}) {
-  return (
-    <div className="flex items-baseline justify-between py-2.5">
-      <div>
-        <span className="text-sm text-ink-700 dark:text-ink-200">{label}</span>
-        {note ? (
-          <span className="ml-2 font-mono text-[10px] uppercase tracking-widest text-ink-400 dark:text-ink-500">
-            {note}
-          </span>
-        ) : null}
-      </div>
-      <span className="font-mono text-sm font-medium text-ink-900 dark:text-cream-100">
-        {value}
-      </span>
-    </div>
-  );
-}
 
 function SummaryRow({
   label,

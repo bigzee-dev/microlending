@@ -44,7 +44,7 @@ function calc(amount: number, months: number) {
 }
 
 export function LoanCalculator() {
-  const [amount, setAmount] = useState(3500);
+  const [amount, setAmount] = useState(1000);
   const [months, setMonths] = useState(1);
 
   const { interest, rate, total, installmentAmount, installments } = useMemo(

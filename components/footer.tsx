@@ -22,8 +22,8 @@ const linkGroups = [
   {
     title: "Company",
     links: [
-      { href: "why-us", label: "About us" },
-      { href: "#", label: "Contact us" },
+      { href: "#why-us", label: "About us" },
+      { href: "#contact", label: "Contact us" },
     ],
   },
   {

@@ -41,6 +41,9 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${montserrat.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
+      style={{
+        colorScheme: "light",
+      }}
     >
       <body className="font-sans antialiased">{children}</body>
     </html>

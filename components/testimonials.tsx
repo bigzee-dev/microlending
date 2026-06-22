@@ -37,8 +37,8 @@ export function Testimonials() {
 
             <blockquote className="-mt-8 font-display text-xl font-normal leading-snug text-cream-100 sm:text-2xl lg:text-3xl lg:leading-snug text-balance">
               I needed money urgently to cover my child&apos;s school
-              registration. MicroLending paid me out within 40 minutes.
-              Honestly, I was shocked. I&apos;ll use them again.
+              registration. QuickLittleLoans paid me out within a day. Honestly,
+              I was shocked. I&apos;ll use them again.
             </blockquote>
 
             <figcaption className="mt-8 flex items-center gap-4 border-t border-ink-800 pt-6">

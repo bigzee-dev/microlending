@@ -94,8 +94,6 @@ export function HowItWorks() {
             </li>
           ))}
         </ol>
-
-        <div className="mt-10 asterism" />
       </div>
     </section>
   );

@@ -1,46 +1,24 @@
 import { FaCar } from "react-icons/fa";
-import { LuHouse } from "react-icons/lu";
 import { MdOutlineBusinessCenter } from "react-icons/md";
-import { FaUsers } from "react-icons/fa6";
+import { FaUsers, FaHouse } from "react-icons/fa6";
+import { IoSchool } from "react-icons/io5";
+import { FaRegHeart } from "react-icons/fa";
 
 const cases = [
   {
     title: "Household emergencies",
     body: "Burst geyser? Broken fridge? Cover unexpected home costs without dipping into savings.",
-    icon: <LuHouse className="h-5 w-5" />,
+    icon: <FaHouse className="h-5 w-5" />,
   },
   {
     title: "School fees & uniforms",
     body: "Make sure the kids are ready for the new term — repay comfortably once your salary lands.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="m22 10-10-5L2 10l10 5 10-5z" />
-        <path d="M6 12v5c0 1 4 3 6 3s6-2 6-3v-5" />
-      </svg>
-    ),
+    icon: <IoSchool className="h-5 w-5" />,
   },
   {
     title: "Health & wellness",
     body: "Cover medical bills, prescriptions, or specialist consultations when you need them most.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z" />
-      </svg>
-    ),
+    icon: <FaRegHeart className="h-5 w-5" />,
   },
   {
     title: "Car repairs",
@@ -79,7 +57,7 @@ export function UseCases() {
                `}
             >
               <div className="flex items-start justify-between">
-                <span className="text-ink-100 grid h-12 w-12 place-items-center rounded-full border border-ink-200 bg-clay-600 transition group-hover:border-clay-500 group-hover:bg-clay-500 group-hover:text-cream-50 dark:border-ink-600 dark:text-clay-300 dark:group-hover:border-clay-400 dark:group-hover:bg-clay-400 dark:group-hover:text-ink-950">
+                <span className="text-white grid h-12 w-12 place-items-center rounded-full border border-ink-200 bg-clay-600 transition group-hover:border-clay-500 group-hover:bg-clay-500 group-hover:text-cream-50 dark:border-ink-600 dark:text-clay-300 dark:group-hover:border-clay-400 dark:group-hover:bg-clay-400 dark:group-hover:text-ink-950">
                   <span className="h-5 w-5">{c.icon}</span>
                 </span>
                 <span className="font-mono text-[10px] uppercase tracking-widest text-ink-400 dark:text-ink-500">

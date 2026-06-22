@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function LoanTable() {
   const loanData = [
-    { capital: 1000, month1: 1250, month2: 705, month3: 705 },
+    { capital: 1000, month1: 1250, month2: 705, month3: null },
     { capital: 1500, month1: 1875, month2: 1058, month3: 793 },
     { capital: 2000, month1: 2500, month2: 1410, month3: 1057 },
     { capital: 2500, month1: 3125, month2: 1763, month3: 1321 },
@@ -90,7 +90,7 @@ export function LoanTable() {
                       P{row.month2.toLocaleString()}
                     </td>
                     <td className="px-3 md:px-6 py-4 text-sm text-gray-700">
-                      P{row.month3.toLocaleString()}
+                      {row.month3 === null ? "—" : `P${row.month3.toLocaleString()}`}
                     </td>
                   </tr>
                 ))}

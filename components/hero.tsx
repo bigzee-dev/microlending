@@ -226,6 +226,7 @@ export function Hero() {
                     "Pay Day Loans",
                     "Business Loans",
                     "Purchase Orders Financing",
+                    "Micro Loans",
                   ].map((name) => (
                     <span
                       key={`${dup}-${name}`}

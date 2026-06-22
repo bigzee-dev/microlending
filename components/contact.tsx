@@ -1,15 +1,13 @@
 import Link from "next/link";
 import { ContactForm } from "./contact-form";
 
-const PHONE = "+267 71 234 567";
-const PHONE_LINK = "tel:+26771234567";
-const EMAIL = "hello@microlending.co.bw";
-const EMAIL_LINK = "mailto:hello@microlending.co.bw";
-const WHATSAPP_NUMBER = "26771234567";
+const PHONE = "(+267) 74555564 / 75376888";
+const EMAIL = "loansbytmb@gmail.com";
+const WHATSAPP_NUMBER = "26775376888";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   "Hi MicroLending! I'd like to apply for a loan.",
 )}`;
-const FACEBOOK_LINK = "https://facebook.com/microlendingbw";
+const FACEBOOK_LINK = "https://web.facebook.com/profile.php?id=61586555699940";
 
 export function Contact() {
   return (
@@ -24,12 +22,12 @@ export function Contact() {
         <div className="grid items-end gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <h2 className="mt-4 font-display text-4xl font-semibold leading-[1] tracking-editorial text-ink-900 sm:text-5xl lg:text-6xl text-balance dark:text-cream-100">
-              However you like to chat — we're here.
+              Chat to us - Apply for a Loan.
             </h2>
           </div>
           <p className="max-w-sm text-base leading-relaxed text-ink-600 lg:col-span-5 dark:text-ink-300">
-            Pick the channel that suits you. Our Gaborone team typically replies
-            in under 5 minutes during working hours.
+            Pick the channel that suits you. Our dedicated team typically
+            replies in under 5 minutes during working hours.
           </p>
         </div>
 
@@ -84,7 +82,7 @@ export function Contact() {
               </p>
 
               <div className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-emerald-700 transition group-hover:scale-[1.02] group-hover:bg-emerald-50">
-                +267 71 234 567
+                +267 75376888
                 <svg
                   className="h-3.5 w-3.5"
                   viewBox="0 0 24 24"
@@ -113,16 +111,16 @@ export function Contact() {
             {/* Faux post card */}
             <div className="pointer-events-none absolute right-5 top-6 hidden w-48 -rotate-3 rounded-2xl bg-white/95 p-3 text-slate-800 shadow-xl sm:block">
               <div className="flex items-center gap-2">
-                <div className="grid h-7 w-7 place-items-center rounded-full bg-clay-500 text-[10px] font-bold text-cream-50">
-                  ML
+                <div className="grid h-7 w-7 place-items-center rounded-full bg-clay-500 text-[12px] font-bold text-cream-50">
+                  Q
                 </div>
                 <div className="text-[10px] leading-tight">
-                  <div className="font-semibold">MicroLending</div>
+                  <div className="font-semibold">QuickLittleLoans</div>
                   <div className="text-slate-500">Sponsored · 🌍</div>
                 </div>
               </div>
               <p className="mt-2 text-[10px] leading-snug text-slate-700">
-                Apply in 5 minutes. Paid in 60. ✨
+                Apply and get fast cash today. ✨
               </p>
               <div className="mt-2 flex items-center gap-3 border-t pt-1.5 text-[9px] font-semibold text-slate-500">
                 <span>👍 1.2k</span>
@@ -142,21 +140,18 @@ export function Contact() {
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                   </svg>
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest backdrop-blur">
-                  ★ 10k+ followers
-                </span>
               </div>
 
               <h3 className="mt-12 font-display text-4xl font-semibold tracking-editorial sm:text-5xl">
                 Follow on <span className="italic font-normal">Facebook</span>
               </h3>
               <p className="mt-3 max-w-sm text-sm leading-relaxed text-sky-50/85">
-                Money tips, customer stories, exclusive offers from our Gaborone
-                community.
+                Money tips, customer stories, exclusive offers from
+                QuickLittleLoans.
               </p>
 
               <div className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-[#1877F2] transition group-hover:scale-[1.02] group-hover:bg-sky-50">
-                @microlendingbw
+                @quicklittleloans
                 <svg
                   className="h-3.5 w-3.5"
                   viewBox="0 0 24 24"
@@ -175,11 +170,8 @@ export function Contact() {
 
         {/* Phone + Email */}
         <div className="mt-8 grid gap-0 border border-ink-200 lg:grid-cols-2 dark:border-ink-800">
-          <Link
-            href={PHONE_LINK}
-            className="group relative flex items-center gap-5 bg-cream-50 p-6 transition hover:bg-cream-100/60 sm:p-7 dark:bg-ink-950 dark:hover:bg-ink-900/60"
-          >
-            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-ink-200  transition group-hover:border-clay-500 bg-clay-500 text-cream-50 dark:border-ink-700 dark:text-clay-200">
+          <div className="flex items-center gap-5 bg-cream-50 p-6 sm:p-7 dark:bg-ink-950">
+            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-ink-200 bg-clay-500 text-white dark:border-ink-700">
               <svg
                 className="h-5 w-5"
                 viewBox="0 0 24 24"
@@ -192,7 +184,7 @@ export function Contact() {
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
             </span>
-            <div className="flex-1">
+            <div className="select-all">
               <div className="font-mono text-[10px] uppercase tracking-widest text-ink-500 dark:text-ink-300">
                 Call us
               </div>
@@ -200,24 +192,10 @@ export function Contact() {
                 {PHONE}
               </div>
             </div>
-            <svg
-              className="h-4 w-4 text-ink-400 transition group-hover:translate-x-1 group-hover:text-clay-600 dark:text-ink-500"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-          </Link>
+          </div>
 
-          <Link
-            href={EMAIL_LINK}
-            className="group relative flex items-center gap-5 border-t border-ink-200 bg-cream-50 p-6 transition hover:bg-cream-100/60 sm:p-7 lg:border-l lg:border-t-0 dark:border-ink-800 dark:bg-ink-950 dark:hover:bg-ink-900/60"
-          >
-            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-ink-200 bg-clay-500 text-cream-50 transition  dark:border-ink-700 dark:text-forest-200 dark:group-hover:border-forest-400 dark:group-hover:bg-forest-400 dark:group-hover:text-ink-950">
+          <div className="flex items-center gap-5 border-t border-ink-200 bg-cream-50 p-6 sm:p-7 lg:border-l lg:border-t-0 dark:border-ink-800 dark:bg-ink-950">
+            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-ink-200 bg-clay-500 text-white dark:border-ink-700">
               <svg
                 className="h-5 w-5"
                 viewBox="0 0 24 24"
@@ -231,7 +209,7 @@ export function Contact() {
                 <path d="m22 7-10 6L2 7" />
               </svg>
             </span>
-            <div className="flex-1">
+            <div className="select-all">
               <div className="font-mono text-[10px] uppercase tracking-widest text-ink-500 dark:text-ink-300">
                 Email us
               </div>
@@ -239,18 +217,7 @@ export function Contact() {
                 {EMAIL}
               </div>
             </div>
-            <svg
-              className="h-4 w-4 text-ink-400 transition group-hover:translate-x-1 group-hover:text-forest-700 dark:text-ink-500"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-          </Link>
+          </div>
         </div>
 
         {/* Office strip */}
@@ -275,7 +242,7 @@ export function Contact() {
                 Visit our office
               </div>
               <div className="font-display text-base font-medium text-ink-900 dark:text-cream-100">
-                Plot 1234, Main Mall · Gaborone, Botswana
+                Fairgrounds · Gaborone, Botswana
               </div>
             </div>
           </div>

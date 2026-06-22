@@ -4,24 +4,24 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "Who can apply for a MicroLending loan?",
-    a: "Any Motswana citizen aged 18 or older with a valid Omang, a Botswana bank account, and a regular source of income can apply. You don't need a perfect credit history — we look at your overall affordability.",
+    q: "Who can apply for a loan?",
+    a: "Any Motswana citizen aged 21 or older with a valid Omang, a Botswana bank account, and a regular source of income can apply. You don't need a perfect credit history — we look at your overall affordability.",
   },
   {
     q: "How much can I borrow?",
-    a: "First-time customers can borrow between P500 and P5,000. As you build a repayment track record with us, your limit can grow up to P15,000.",
+    a: "Our customers can borrow between P500 and P6,000.",
   },
   {
     q: "How fast will I get my money?",
-    a: "Most approved loans are paid out within 60 minutes during business hours (Mon–Sat, 08:00–17:00 CAT). Applications outside business hours are processed first thing the next working day.",
+    a: "Most approved loans are paid out within a day during business hours (Mon–Sat, 08:00–17:00 CAT). Applications outside business hours are processed first thing the next working day.",
   },
   {
     q: "What documents do I need?",
-    a: "Just your Omang and your three most recent payslips or bank statements. You can upload photos directly during the online application — no scanning required.",
+    a: "Just your Omang, your recent payslip, 3 months bank statements and letter of employment.",
   },
   {
     q: "What does it cost?",
-    a: "Pricing depends on how much you borrow and for how long. Every fee — interest, initiation fee, service fee — is shown clearly in the calculator above before you commit. There are no hidden charges.",
+    a: "The cost of your loan depends on the amount you borrow and the repayment period you choose. You can use the loan calculator on our website to see your estimated repayments before applying. Please note that a P15 transaction fee applies to the disbursement of each loan.",
   },
   {
     q: "What happens if I can't repay on time?",
@@ -29,11 +29,11 @@ const faqs = [
   },
   {
     q: "Is my information safe?",
-    a: "Yes. We use bank-grade encryption, store data on secured servers, and never sell your information. We comply with Botswana's Data Protection Act.",
+    a: "Yes. Your information is handled securely by our team and we never sell your information. We comply with Botswana's Data Protection Act.",
   },
   {
     q: "Are you a registered lender?",
-    a: "MicroLending operates in line with NBFIRA guidelines and Botswana's consumer credit regulations. Our license details are visible at our Gaborone office and in the footer of this site.",
+    a: "The Money Bakery (Pty) Ltd, T/A QuickLittleLoans operates in line with NBFIRA guidelines and Botswana's consumer credit regulations. Our license details are visible at our Gaborone office.",
   },
 ];
 
@@ -41,7 +41,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative scroll-mt-20 py-6 sm:py-28 ">
+    <section id="faq" className="relative scroll-mt-20 py-6 sm:py-24 sm:pt-20 ">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
         <div className="grid items-end gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">

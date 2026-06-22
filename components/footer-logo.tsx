@@ -1,16 +1,16 @@
 import { SITE_CONFIG } from "@/lib/constants";
 import Image from "next/image";
 
-export function Logo({ className = "" }: { className?: string }) {
+export function FooterLogo({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       {/* Monogram mark — overlapping P (pula) inside circle */}
-      <div className="overflow-hidden relative grid h-[4.5rem] w-24 place-items-center dark:bg-cream-100">
+      <div className="overflow-hidden relative grid h-[7rem] w-[7rem]  place-items-center">
         <Image
-          src="/logo/qll-colours.svg"
+          src="/logo/qll-blue-bkground.jpg"
           alt={`${SITE_CONFIG.companyName} logo`}
           fill
-          className="object-contain"
+          className="object-contain rounded-full"
         />
       </div>
 

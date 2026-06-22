@@ -107,7 +107,7 @@ export function LoanCalculator() {
               <div className="flex gap-1.5">
                 <CounterBtn
                   onClick={() =>
-                    setAmount((a) => Math.max(MIN_AMOUNT, a - 100))
+                    setAmount((a) => Math.max(MIN_AMOUNT, a - 500))
                   }
                   label="Decrease"
                 >
@@ -115,7 +115,7 @@ export function LoanCalculator() {
                 </CounterBtn>
                 <CounterBtn
                   onClick={() =>
-                    setAmount((a) => Math.min(MAX_AMOUNT, a + 100))
+                    setAmount((a) => Math.min(MAX_AMOUNT, a + 500))
                   }
                   label="Increase"
                 >
@@ -293,11 +293,6 @@ export function LoanCalculator() {
             </div>
           </div>
         </div>
-        <div className="mt-10 asterism" />
-        <p className="mt-4 font-mono mx-auto max-w-max text-[11px]">
-          Please note that a P15 transaction fee applies to the disbursement of
-          each loan.
-        </p>
       </div>
     </section>
   );

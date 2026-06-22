@@ -8,18 +8,18 @@ const features = [
   },
   {
     n: "ii.",
-    title: "Built for Botswana",
-    body: "Designed locally for local needs. Use your Omang, get paid in Pula, get help in Setswana or English.",
+    title: "Low Interest Rates",
+    body: "We offer some of the lowest interest rates in Botswana. Our goal is to make borrowing affordable and fair.",
   },
   {
     n: "iii.",
-    title: "Cash in your account",
-    body: "Once approved, your money lands in your Botswana bank account",
+    title: "Licensed and Regulated",
+    body: "We are a fully licensed micro-lender and we are regulated by the Non-Bank Financial Institutions Regulatory Authority (NBFIRA).",
   },
   {
     n: "iv.",
     title: "Lightning-fast payout",
-    body: "Approved loans land in your bank account within 60 minutes — Monday to Saturday.",
+    body: "Approved loans land in your bank account promptly — Monday to Saturday.",
   },
   {
     n: "v.",
@@ -45,18 +45,19 @@ export function WhyUs() {
         <div className="grid items-end gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <h2 className="mt-4 font-display text-4xl font-semibold leading-[1] tracking-editorial text-ink-900 sm:text-5xl lg:text-6xl text-balance dark:text-cream-100">
-              Lending built on{" "}
+              Why Choose us -{" "}
               <span className="italic font-normal text-clay-600 dark:text-clay-300">
-                trust,
+                Lending,
               </span>{" "}
-              not on tricks.
+              built on trust.
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-ink-600 lg:col-span-5 dark:text-ink-300">
-            We started MicroLending because Batswana deserve better than
-            predatory lenders. Lend a fair amount, charge a fair price, treat
-            every customer like a neighbour — because in Botswana, they probably
-            are.
+            The Money Bakery (Pty) Ltd - Reg (BW00009022318) T/A{" "}
+            <strong>QuickLittleLoans</strong> is a licensed micro-lender in
+            Botswana. We are committed to responsible lending and transparent
+            pricing. Our goal is to provide fast, fair, and flexible loans to
+            help you meet your financial needs.
           </p>
         </div>
 

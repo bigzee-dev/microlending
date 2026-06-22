@@ -15,8 +15,8 @@ const perks = [
         <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
-    label: "Approved same day",
-    note: "Submit before 14:00",
+    label: "Fast Approvals",
+    note: "Get quick cash",
   },
   {
     icon: (
@@ -32,8 +32,8 @@ const perks = [
         <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
       </svg>
     ),
-    label: "Payslip is all you need",
-    note: "No extra documents",
+    label: "No Drama",
+    note: "Simple KYC process",
   },
   {
     icon: (
@@ -49,8 +49,8 @@ const perks = [
         <polyline points="9 12 11 14 15 10" />
       </svg>
     ),
-    label: "No salary cession",
-    note: "Keep control of your account",
+    label: "Low interest Rates",
+    note: "Pay back easily",
   },
   {
     icon: (
@@ -67,8 +67,8 @@ const perks = [
         <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
       </svg>
     ),
-    label: "Repeat with one message",
-    note: "Skip the forms next time",
+    label: "Apply again easily",
+    note: "Reapply without hassle",
   },
 ];
 
@@ -124,14 +124,13 @@ export function GovernmentFastTrack() {
             <h2 className="mt-6 font-display text-4xl font-semibold leading-[1] tracking-editorial text-cream-50 text-balance sm:text-5xl lg:text-6xl">
               Civil Servants —{" "}
               <span className="font-normal text-cream-200">
-                approved in 24 hours.
+                Approved Quickly.
               </span>
             </h2>
 
             <p className="mt-6 max-w-md text-base leading-relaxed text-cream-100/80">
-              Your government employment is your strongest credential. Show us
-              your latest payslip and we'll take care of the rest — same day, no
-              queues, no paperwork chase.
+              Your government employment is your strongest credential. Get quick
+              cash today to keep you going till payday.
             </p>
 
             {/* CTA */}

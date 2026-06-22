@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HashLink } from "@/components/hash-link";
 
 const perks = [
   {
@@ -135,8 +136,8 @@ export function GovernmentFastTrack() {
 
             {/* CTA */}
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Link
-                href="#contact"
+              <HashLink
+                hash="#contact"
                 className="group inline-flex items-center gap-3 rounded-full bg-cream-50 px-6 py-3.5 text-sm font-semibold text-clay-700 transition hover:bg-cream-100 hover:scale-[1.02] active:scale-100"
               >
                 Apply as a civil servant
@@ -153,13 +154,13 @@ export function GovernmentFastTrack() {
                     <path d="M5 12h14M13 5l7 7-7 7" />
                   </svg>
                 </span>
-              </Link>
-              <Link
-                href="#calculator"
+              </HashLink>
+              <HashLink
+                hash="#calculator"
                 className="link-underline text-sm font-medium text-cream-200 hover:text-cream-50 py-2"
               >
                 Calculate first →
-              </Link>
+              </HashLink>
             </div>
           </div>
 

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { scrollToHash } from "@/lib/scroll";
 import { Logo } from "./logo";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { IoLogoFacebook } from "react-icons/io5";
@@ -49,6 +50,7 @@ export function Navbar() {
             <Link
               key={l.href}
               href={l.href}
+              onClick={(e) => scrollToHash(e, l.href)}
               className="group inline-flex items-baseline gap-1.5 rounded-full px-3 py-2 text-sm font-medium text-ink-700 transition hover:text-clay-600 dark:text-ink-200 dark:hover:text-clay-300"
             >
               <span>{l.label}</span>
@@ -88,6 +90,7 @@ export function Navbar() {
           {/* Primary CTA */}
           <Link
             href="#contact"
+            onClick={(e) => scrollToHash(e, "#contact")}
             className="group hidden items-center gap-2 rounded-full bg-ink-900 px-5 py-2.5 text-sm font-medium text-cream-50 transition hover:bg-clay-600 dark:bg-cream-100 dark:text-ink-950 dark:hover:bg-clay-400 sm:inline-flex"
           >
             Apply now
@@ -152,7 +155,7 @@ export function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                onClick={() => setOpen(false)}
+                onClick={(e) => { scrollToHash(e, l.href); setOpen(false); }}
                 className="flex items-baseline justify-between py-4"
               >
                 <span className="font-display text-xl text-ink-900 dark:text-cream-100">
@@ -166,7 +169,7 @@ export function Navbar() {
           </nav>
           <Link
             href="#contact"
-            onClick={() => setOpen(false)}
+            onClick={(e) => { scrollToHash(e, "#contact"); setOpen(false); }}
             className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink-900 px-4 py-3 text-sm font-medium text-cream-50 dark:bg-cream-100 dark:text-ink-950"
           >
             Apply now

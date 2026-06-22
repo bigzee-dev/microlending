@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { scrollToHash } from "@/lib/scroll";
 
 const MIN_AMOUNT = 500;
 const MAX_AMOUNT = 6000;
@@ -271,6 +272,7 @@ export function LoanCalculator() {
 
               <Link
                 href="#contact"
+                onClick={(e) => scrollToHash(e, "#contact")}
                 className="mt-8 inline-flex w-full items-center justify-between gap-2 rounded-full bg-cream-50 px-5 py-3.5 text-sm font-medium text-ink-900 transition hover:bg-clay-400 hover:text-cream-50"
               >
                 Apply for {PULA(amount).replace(/\.00$/, "")}

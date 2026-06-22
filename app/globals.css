@@ -206,8 +206,8 @@ input[type="range"].slider::-webkit-slider-runnable-track {
   border-radius: 999px;
   background: linear-gradient(
     to right,
-    rgb(var(--clay)) 0%,
-    rgb(var(--clay)) var(--progress, 50%),
+    #2dd4bf 0%,
+    #2dd4bf var(--progress, 50%),
     rgb(var(--rule)) var(--progress, 50%),
     rgb(var(--rule)) 100%
   );
@@ -218,8 +218,8 @@ input[type="range"].slider::-moz-range-track {
   border-radius: 999px;
   background: linear-gradient(
     to right,
-    rgb(var(--clay)) 0%,
-    rgb(var(--clay)) var(--progress, 50%),
+    #2dd4bf 0%,
+    #2dd4bf var(--progress, 50%),
     rgb(var(--rule)) var(--progress, 50%),
     rgb(var(--rule)) 100%
   );
@@ -232,9 +232,9 @@ input[type="range"].slider::-webkit-slider-thumb {
   width: 22px;
   border-radius: 50%;
   background: rgb(var(--bg));
-  border: 2.5px solid rgb(var(--clay));
+  border: 2.5px solid #2dd4bf;
   margin-top: -8px;
-  box-shadow: 0 8px 22px -8px rgba(184, 85, 46, 0.55);
+  box-shadow: 0 8px 22px -8px rgba(45, 212, 191, 0.55);
   transition:
     transform 0.15s ease,
     box-shadow 0.15s ease;
@@ -242,11 +242,11 @@ input[type="range"].slider::-webkit-slider-thumb {
 
 input[type="range"].slider:hover::-webkit-slider-thumb {
   transform: scale(1.08);
-  box-shadow: 0 10px 26px -8px rgba(184, 85, 46, 0.7);
+  box-shadow: 0 10px 26px -8px rgba(45, 212, 191, 0.7);
 }
 
 input[type="range"].slider:focus-visible::-webkit-slider-thumb {
-  outline: 3px solid rgb(var(--clay) / 0.3);
+  outline: 3px solid rgba(45, 212, 191, 0.3);
   outline-offset: 2px;
 }
 
@@ -255,8 +255,8 @@ input[type="range"].slider::-moz-range-thumb {
   width: 22px;
   border-radius: 50%;
   background: rgb(var(--bg));
-  border: 2.5px solid rgb(var(--clay));
-  box-shadow: 0 8px 22px -8px rgba(184, 85, 46, 0.55);
+  border: 2.5px solid #2dd4bf;
+  box-shadow: 0 8px 22px -8px rgba(45, 212, 191, 0.55);
   cursor: pointer;
 }
 

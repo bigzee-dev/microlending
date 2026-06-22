@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HashLink } from "@/components/hash-link";
 
 export function Hero() {
   return (
@@ -42,8 +43,8 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
-            <Link
-              href="#calculator"
+            <HashLink
+              hash="#calculator"
               className="group inline-flex items-center gap-3 rounded-full bg-ink-900 px-6 py-3.5 text-sm font-medium text-cream-50 transition hover:bg-clay-600 dark:bg-cream-100 dark:text-ink-950 dark:hover:bg-clay-400"
             >
               Calculate your loan
@@ -60,16 +61,16 @@ export function Hero() {
                   <path d="M5 12h14M13 5l7 7-7 7" />
                 </svg>
               </span>
-            </Link>
-            <Link
-              href="#how-it-works"
+            </HashLink>
+            <HashLink
+              hash="#how-it-works"
               className="link-underline inline-flex items-center gap-2 py-3 text-sm font-medium text-ink-900 dark:text-cream-100"
             >
               How it works
               <span className="font-mono text-[11px] text-clay-600 dark:text-clay-300">
                 →
               </span>
-            </Link>
+            </HashLink>
           </div>
 
           {/* Editorial stat ledger */}

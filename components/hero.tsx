@@ -122,7 +122,7 @@ export function Hero() {
             <div className="absolute -left-3 -top-3 hidden h-24 w-24 border-l-2 border-t-2 border-clay-500 lg:block" />
             <div className="absolute -bottom-3 -right-3 hidden h-24 w-24 border-b-2 border-r-2 border-forest-700 lg:block dark:border-forest-300" />
 
-            <div className="relative h-28 w-auto overflow-hidden bg-ink-100 dark:bg-ink-800">
+            <div className="relative aspect-[4/5] overflow-hidden bg-ink-100 dark:bg-ink-800">
               <Image
                 src="/111122.jpg"
                 alt="Botswana entrepreneur looking at her phone"
